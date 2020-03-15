@@ -1,0 +1,170 @@
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+   <title>Визуализируй это!</title>
+   <link>https://shakraz.github.io/</link>
+   <description>Recent content on Визуализируй это!</description>
+   <generator>Hugo -- gohugo.io</generator>
+   <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
+   <lastBuildDate>Sun, 15 Mar 2020 14:18:10 -0400</lastBuildDate>
+   
+       <atom:link href="https://shakraz.github.io/index.xml" rel="self" type="application/rss+xml" />
+   
+   
+     <item>
+       <title>Сальдо внешней миграции по специальностям и регионам за 2000-2019 гг.</title>
+       <link>https://shakraz.github.io/blogs/saldo/</link>
+       <pubDate>Sun, 15 Mar 2020 14:18:10 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/saldo/</guid>
+       <description>&lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;style&gt; 
+    .cards text{
+      font-size:12px;
+&lt;pre&gt;&lt;code&gt;}
+.cards text:hover{
+  font-size:8px;
+  
+}
+body{
+  font-family:Roboto;
+  color:steelblue;
+}
+.reg{
+  font-family:Roboto;
+  color:#ccc;
+  font-size:10px;
+}
+
+#chart{
+  margin:auto;
+  width:100%;
+}
+.legend text{
+  font-size:8px;
+}
+
+text{
+  fill:steelblue;
+  opacity:0.8;
+}
+.labels{
+  font-size: 10px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;.tooltip {
+position: absolute;
+text-align: center;
+width: 200px;
+height: 100px;
+padding: 2px;
+text-align: left;
+font: 10px sans-serif;
+border: 1px;
+border-radius: 8px;
+pointer-events: none;
+}
+.avg_labels{
+font-size: 8px;
+fill:#ccc;
+font-family: Roboto;
+opacity: 0.7
+}
+&lt;/style&gt;&lt;/p&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
+&lt;div class=&#34;tooltip&#34;&gt; &lt;/div&gt;
+  &lt;div id=&#34;chart&#34;&gt;
+  &lt;/div&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/bar.js&#34;&gt;&lt;/script&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;
+</description>
+     </item>
+   
+     <item>
+       <title>Депутатские запросы сенаторов РК. 6 созыв</title>
+       <link>https://shakraz.github.io/blogs/deputies/</link>
+       <pubDate>Sun, 15 Mar 2020 12:15:04 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/deputies/</guid>
+       <description>&lt;p&gt;Как видно на этом простом примере, депутаты, попавшие в Сенат через указ президента, наименее инициативные и вовлеченные.&lt;/p&gt;
+&lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;style&gt; 
+    .cards text{
+      font-size:12px;
+&lt;pre&gt;&lt;code&gt;}
+.cards text:hover{
+  font-size:8px;
+  
+}
+body{
+  font-family:Roboto;
+  color:steelblue;
+}
+.reg{
+  font-family:Roboto;
+  color:#ccc;
+
+  font-size:10px;
+}
+#chart{
+  width:100%;
+}
+.legend text{
+  font-size:8px;
+}
+
+text{
+  fill:steelblue;
+  opacity:0.8;
+}
+.labels{
+  font-size: 10px;
+}
+
+.tooltip {
+    position: absolute; 
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    display:none;
+    padding: 2px;
+    text-align: left;
+    font: 10px sans-serif; 
+}
+.clicked{
+  stroke:black;
+}
+.avg_labels{
+  font-size: 8px;
+  fill:#ccc;
+  font-family: Roboto;
+  opacity: 0.7
+}
+img{
+  border-radius: 50%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
+&lt;div class=&#34;tooltip&#34;&gt; 
+&lt;img src=&#34;&#34;  alt=&#34;Smiley face&#34; height=&#34;42&#34; width=&#34;42&#34;/&gt;
+&lt;/div&gt;
+  &lt;div id=&#34;chart&#34;&gt;
+  &lt;/div&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/scatter.js&#34;&gt;&lt;/script&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;
+</description>
+     </item>
+   
+ </channel>
+</rss>

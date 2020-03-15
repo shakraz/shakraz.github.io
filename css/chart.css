@@ -1,0 +1,32 @@
+<style> 
+    .cards text{
+      font-size:12px;
+      
+    }
+    #chart text{
+    fill:steelblue;
+    }
+    .cards text:hover{
+      font-size:18px;
+      
+    }
+    .cards  text{
+    fill:black;
+    }
+    body{
+      font-family:Roboto;
+    }
+    .reg{
+      font-family:Roboto;
+      color:#ccc;
+      font-size:10px;
+    }
+    #chart{
+      margin:auto;
+      width:90%;
+    }
+    .legend text{
+      font-size:8px;
+    }
+
+</style>
