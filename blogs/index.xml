@@ -25,9 +25,13 @@
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
 &lt;style&gt; 
-    .cards text{
-      font-size:12px;
-&lt;pre&gt;&lt;code&gt;}
+.legend text{font-size:1px}
+.names{font-size:12px} body{font-family:Roboto}
+&lt;p&gt;svg:hover rect:not(:hover) { opacity: .5; }&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.cards text{
+  font-size:12px;
+  
+}
 .cards text:hover{
   font-size:16px;
   
@@ -79,7 +83,7 @@ opacity: 0.7
 &lt;/style&gt;&lt;/p&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;script src=&#34;https://d3js.org/d3.v5.min.js&#34;&gt;&lt;/script&gt; 
+  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
 &lt;div class=&#34;tooltip&#34;&gt; &lt;/div&gt;
   &lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;

@@ -126,9 +126,13 @@
 <head>
   <meta charset="utf-8">
 <style> 
-    .cards text{
-      font-size:12px;
-<pre><code>}
+.legend text{font-size:1px}
+.names{font-size:12px} body{font-family:Roboto}
+<p>svg:hover rect:not(:hover) { opacity: .5; }</p>
+<pre><code>.cards text{
+  font-size:12px;
+  
+}
 .cards text:hover{
   font-size:16px;
   
@@ -180,7 +184,7 @@ opacity: 0.7
 </style></p>
 </head>
 <body>
-  <script src="https://d3js.org/d3.v5.min.js"></script> 
+  <script src="https://shakraz.github.io/js/d3.js"></script> 
 <div class="tooltip"> </div>
   <div id="chart">
   </div>
