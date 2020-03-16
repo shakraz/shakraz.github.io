@@ -17,11 +17,16 @@ const margin={top:20,bottom:20, left:40,right:5},
                    .range(legend_color)
   var gridSize=35;
 
-var dataset=d3.csvParse("/data/heatmap.csv",d3.autoType())
+var dataset=d3.csvParse("data/heatmap.csv",d=>{
+  d.total=+d.total;
+  d.region_id=+d.region_id;
+  d.occupation_id=+d.occupation_id;
+  d.occupation_id=d.occupation_id==9?8:d.occupation_id;
+return d
+})
+console.log(dataset)
 
-dataset.forEach(d=>{
-d.occupation_id=d.occupation_id==9?8:d.occupation_id;
-});
+
 
 dataset = dataset.filter(d=>d.occupation!="Не указавшие")
 

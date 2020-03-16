@@ -29,7 +29,7 @@
       font-size:12px;
 &lt;pre&gt;&lt;code&gt;}
 .cards text:hover{
-  font-size:15px;
+  font-size:16px;
   
 }
 body{
@@ -52,7 +52,6 @@ body{
 }
 
 text{
-  fill:steelblue;
   opacity:0.8;
 }
 .labels{
@@ -80,11 +79,11 @@ opacity: 0.7
 &lt;/style&gt;&lt;/p&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
+  &lt;script src=&#34;https://d3js.org/d3.v5.min.js&#34;&gt;&lt;/script&gt; 
 &lt;div class=&#34;tooltip&#34;&gt; &lt;/div&gt;
   &lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/bar.js&#34;&gt;&lt;/script&gt; 
+&lt;script src=&#34;https://shakraz.github.io/js/heatmap.js&#34;&gt;&lt;/script&gt; 
 &lt;/body&gt; 
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
