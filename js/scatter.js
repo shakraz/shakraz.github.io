@@ -974,7 +974,7 @@ var draw=function(id){
 			       .attr("fill",d=>color(d.y))
 			       .on("mouseover",function(d){
 
-                        tooltip.html("<img src='images/image1.png'")
+                        tooltip.html("<img src='http://localhost:1313//images/image1.png'/>")
                         
         			    tooltip
         	                .style("display","inline")
