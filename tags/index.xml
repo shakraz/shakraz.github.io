@@ -1,11 +1,12 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
  <channel>
-   <title>Tags on Визуализируй это!</title>
+   <title>Tags on DATAVIZ.KZ</title>
    <link>https://shakraz.github.io/tags/</link>
-   <description>Recent content in Tags on Визуализируй это!</description>
+   <description>Recent content in Tags on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
+   <lastBuildDate>Sun, 15 Mar 2020 12:15:04 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
    

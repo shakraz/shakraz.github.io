@@ -38,12 +38,22 @@
   </url>
   
   <url>
-    <loc>https://shakraz.github.io/blogs/deputies/</loc>
+    <loc>https://shakraz.github.io/tags/scatter/</loc>
     <lastmod>2020-03-15T12:15:04-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://shakraz.github.io/tags/</loc>
+    <lastmod>2020-03-15T12:15:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shakraz.github.io/blogs/deputies/</loc>
+    <lastmod>2020-03-15T12:15:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shakraz.github.io/about/</loc>
   </url>
   
 </urlset>

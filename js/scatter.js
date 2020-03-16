@@ -973,8 +973,8 @@ var draw=function(id){
 			       .attr("r", "10px")
 			       .attr("fill",d=>color(d.y))
 			       .on("mouseover",function(d){
-                        d3.select(this).attr("opacity",1)
-                        tooltip.append("img").attr("src","http://senate.parlam.kz"+d.photo)
+
+                        tooltip.html("<img src='images/image1.png'")
                         
         			    tooltip
         	                .style("display","inline")
