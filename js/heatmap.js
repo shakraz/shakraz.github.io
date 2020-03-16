@@ -171,6 +171,7 @@ dataset = dataset.filter(d=>d.occupation!="Не указавшие")
   var cards = svg.append("g").attr("transform", "translate(100,150)").selectAll("rect")
                  .data(dataset).enter()
                  .append("g")
+                 .attr("class","cards")
                  .attr("transform",(d,i)=> "translate("+(gridSize*d.region_id+2*d.region_id)+","+(gridSize*d.occupation_id+2*d.occupation_id)+")")
   
   var rects=cards
@@ -184,7 +185,7 @@ dataset = dataset.filter(d=>d.occupation!="Не указавшие")
                    .attr("class","values")
                    .attr('x',gridSize/2)
                    .attr("y", gridSize/2)
-                   .style("font-size","8px")
+                  // .style("font-size","8px")
                    .text(d=>d.total)
   
   svg.append("g")

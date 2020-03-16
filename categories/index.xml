@@ -25,15 +25,18 @@
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
 &lt;style&gt; 
-.legend text{font-size:1px}
 .names{font-size:12px} body{font-family:Roboto}
-&lt;p&gt;svg:hover rect:not(:hover) { opacity: .5; }&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.cards text{
+
+svg:hover rect:not(:hover) { opacity: .5; }
+
+.cards text{
   font-size:12px;
+
   
 }
-.cards text:hover{
+.cards text:hover {
   font-size:16px;
+  color:white;
   
 }
 body{
@@ -48,39 +51,18 @@ body{
 #chart{
   margin:auto;
   width:100%;
-
   color:steelblue;
 }
 .legend text{
-  font-size:8px;
+  font-size:10px;
 }
 
-text{
-  opacity:0.8;
-}
 .labels{
   font-size: 10px;
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;.tooltip {
-position: absolute;
-text-align: center;
-width: 200px;
-height: 100px;
-padding: 2px;
-text-align: left;
-font: 10px sans-serif;
-border: 1px;
-border-radius: 8px;
-pointer-events: none;
-}
-.avg_labels{
-font-size: 8px;
-fill:#ccc;
-font-family: Roboto;
-opacity: 0.7
-}
-&lt;/style&gt;&lt;/p&gt;
+
+
+&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
