@@ -17,7 +17,11 @@
        <pubDate>Sun, 15 Mar 2020 14:18:10 -0400</pubDate>
        
        <guid>https://shakraz.github.io/blogs/saldo/</guid>
-       <description>&lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
+       <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
+&lt;p&gt;Визуализация сальдо миграции в разрезе областей и специальностей. Показаны агрегированные значения&lt;/p&gt;
+&lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://taldau.stat.gov.kz/ru&#34;&gt;Комитет Статистики РК&lt;/a&gt;&lt;/p&gt;
+&lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
 &lt;style&gt; 
@@ -25,12 +29,11 @@
       font-size:12px;
 &lt;pre&gt;&lt;code&gt;}
 .cards text:hover{
-  font-size:8px;
+  font-size:15px;
   
 }
 body{
   font-family:Roboto;
-  color:steelblue;
 }
 .reg{
   font-family:Roboto;
@@ -41,6 +44,8 @@ body{
 #chart{
   margin:auto;
   width:100%;
+
+  color:steelblue;
 }
 .legend text{
   font-size:8px;
@@ -82,6 +87,8 @@ opacity: 0.7
 &lt;script src=&#34;https://shakraz.github.io/js/bar.js&#34;&gt;&lt;/script&gt; 
 &lt;/body&gt; 
 &lt;/html&gt;
+&lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
+&lt;p&gt;Все плохо, ребята.&lt;/p&gt;
 </description>
      </item>
    
@@ -91,7 +98,22 @@ opacity: 0.7
        <pubDate>Sun, 15 Mar 2020 12:15:04 -0400</pubDate>
        
        <guid>https://shakraz.github.io/blogs/deputies/</guid>
-       <description>&lt;p&gt;Как видно на этом простом примере, депутаты, попавшие в Сенат через указ президента, наименее инициативные и вовлеченные.&lt;/p&gt;
+       <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
+&lt;p&gt;Визуализировать деятельность депутатов Сената РК 6 созыва.&lt;/p&gt;
+&lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Данные взяты с сайта &lt;a href=&#34;http://senate.parlam.kz/ru-RU/dep-requests&#34;&gt;Сената РК&lt;/a&gt; методом скраппинга.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://senate.parlam.kz/ru-RU/about/deputies&#34;&gt;Список депутатов&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;реализация&#34;&gt;Реализация&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Вовлеченность: количество участий в общих депутатских запросах&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Инициативность: Количество запросов, в которых депутат был инициатором&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
@@ -105,7 +127,6 @@ opacity: 0.7
 }
 body{
   font-family:Roboto;
-  color:steelblue;
 }
 .reg{
   font-family:Roboto;
@@ -115,6 +136,7 @@ body{
 }
 #chart{
   width:100%;
+  color:steelblue;
 }
 .legend text{
   font-size:8px;
@@ -163,6 +185,9 @@ img{
 &lt;script src=&#34;https://shakraz.github.io/js/scatter.js&#34;&gt;&lt;/script&gt; 
 &lt;/body&gt; 
 &lt;/html&gt;
+&lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
+&lt;p&gt;Депутаты, попавшие в Сенат через указ президента наименее вовлеченные и инициативные
+Хочу сделать wordcloud на основе описания запроса, думаю, будет интересно&lt;/p&gt;
 </description>
      </item>
    
