@@ -24,7 +24,7 @@ var fulldata=[
     "participant": 19,
     "initiator": 1,
     "id": "/ru-RU/blog/52/biography",
-    "photo": "/storage/6b8b15b655b340eca2a6cbb6eac03d48.jpg?w=200",
+    "photo": "/storage/6b8b15b655b340eca2a6cbb6eac03d48.jpg",
     "position": "Секретарь Комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Север"
   },
@@ -36,7 +36,7 @@ var fulldata=[
     "participant": 7,
     "initiator": 6,
     "id": "/ru-RU/blog/32/biography",
-    "photo": "/storage/f792f97d80504b4e8640f3dcc03e1d91.jpg?w=200",
+    "photo": "/storage/f792f97d80504b4e8640f3dcc03e1d91.jpg",
     "position": "Секретарь Комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Север"
   },
@@ -48,7 +48,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 5,
     "id": "/ru-RU/blog/269/biography",
-    "photo": "/storage/c1e080adb7a74df1a4b569f6182acd76.png?w=200",
+    "photo": "/storage/c1e080adb7a74df1a4b569f6182acd76.png",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Запад"
   },
@@ -72,7 +72,7 @@ var fulldata=[
     "participant": 32,
     "initiator": 6,
     "id": "/ru-RU/blog/788/biography",
-    "photo": "/storage/2d6aba40bc12452686c1d53e2326e9f5.jpg?w=200",
+    "photo": "/storage/2d6aba40bc12452686c1d53e2326e9f5.jpg",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Запад"
   },
@@ -84,7 +84,7 @@ var fulldata=[
     "participant": 20,
     "initiator": 3,
     "id": "/ru-RU/blog/533/biography",
-    "photo": "/storage/a5dbc8a3e8e4457695ff8b7d8d6b63e4.jpg?w=200",
+    "photo": "/storage/a5dbc8a3e8e4457695ff8b7d8d6b63e4.jpg",
     "position": "Член комитета по финансам и бюджету",
     "y": "Юг"
   },
@@ -96,7 +96,7 @@ var fulldata=[
     "participant": 18,
     "initiator": 6,
     "id": "/ru-RU/blog/586/biography",
-    "photo": "/storage/250af9277f9c45bf9fe70f739c3fa383.jpg?w=200",
+    "photo": "/storage/250af9277f9c45bf9fe70f739c3fa383.jpg",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Юг"
   },
@@ -108,7 +108,7 @@ var fulldata=[
     "participant": 25,
     "initiator": 6,
     "id": "/ru-RU/blog/580/biography",
-    "photo": "/storage/00a835a5320a46cea52b5f3c911f415f.jpg?w=200",
+    "photo": "/storage/00a835a5320a46cea52b5f3c911f415f.jpg",
     "position": "Секретарь Комитета по международным отношениям, обороне и безопасности",
     "y": "Юг"
   },
@@ -132,7 +132,7 @@ var fulldata=[
     "participant": 26,
     "initiator": 6,
     "id": "/ru-RU/blog/617/biography",
-    "photo": "/storage/b954c69f8b7f4ed18aa6002fbc4e3eae.jpg?w=200",
+    "photo": "/storage/b954c69f8b7f4ed18aa6002fbc4e3eae.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Юг"
   },
@@ -144,7 +144,7 @@ var fulldata=[
     "participant": 23,
     "initiator": 2,
     "id": "/ru-RU/blog/254/biography",
-    "photo": "/storage/bbb78c7734904e2da4e63b43df9f82d3.jpg?w=200",
+    "photo": "/storage/bbb78c7734904e2da4e63b43df9f82d3.jpg",
     "position": "Председатель комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Север"
   },
@@ -168,7 +168,7 @@ var fulldata=[
     "participant": 25,
     "initiator": 11,
     "id": "/ru-RU/blog/552/biography",
-    "photo": "/storage/66827ead2bf5475ab3632a0e8ba3ee97.jpg?w=200",
+    "photo": "/storage/66827ead2bf5475ab3632a0e8ba3ee97.jpg",
     "position": "Член комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Север"
   },
@@ -180,7 +180,7 @@ var fulldata=[
     "participant": 0,
     "initiator": 0,
     "id": "/ru-RU/blog/929/biography",
-    "photo": "/storage/ea19e3946b5f48709aff1469b442b058.jpg?w=200",
+    "photo": "/storage/ea19e3946b5f48709aff1469b442b058.jpg",
     "position": "Член комитета по финансам и бюджету",
     "y": "Запад"
   },
@@ -192,7 +192,7 @@ var fulldata=[
     "participant": 37,
     "initiator": 20,
     "id": "/ru-RU/blog/303/biography",
-    "photo": "/storage/01867f8763954a3ab514316b40866ffd.jpg?w=200",
+    "photo": "/storage/01867f8763954a3ab514316b40866ffd.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Запад"
   },
@@ -228,7 +228,7 @@ var fulldata=[
     "participant": 18,
     "initiator": 6,
     "id": "/ru-RU/blog/588/biography",
-    "photo": "/storage/13309eedd5244c27a3c81e4460ad1d12.jpg?w=200",
+    "photo": "/storage/13309eedd5244c27a3c81e4460ad1d12.jpg",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Восток"
   },
@@ -240,7 +240,7 @@ var fulldata=[
     "participant": 18,
     "initiator": 4,
     "id": "/ru-RU/blog/671/biography",
-    "photo": "/storage/d7683f7ec8ff468a88fa75f066194ea2.jpg?w=200",
+    "photo": "/storage/d7683f7ec8ff468a88fa75f066194ea2.jpg",
     "position": "Член комитета по финансам и бюджету",
     "y": "Восток"
   },
@@ -252,7 +252,7 @@ var fulldata=[
     "participant": 31,
     "initiator": 3,
     "id": "/ru-RU/blog/343/biography",
-    "photo": "/storage/9e4ad35ac4a146c596a14eac2d2db800.jpg?w=200",
+    "photo": "/storage/9e4ad35ac4a146c596a14eac2d2db800.jpg",
     "position": "Член комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Юг"
   },
@@ -276,7 +276,7 @@ var fulldata=[
     "participant": 17,
     "initiator": 7,
     "id": "/ru-RU/blog/618/biography",
-    "photo": "/storage/301dadb794cf4d02b5a41b9ebe33b9d2.jpg?w=200",
+    "photo": "/storage/301dadb794cf4d02b5a41b9ebe33b9d2.jpg",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Юг"
   },
@@ -300,7 +300,7 @@ var fulldata=[
     "participant": 22,
     "initiator": 4,
     "id": "/ru-RU/blog/572/biography",
-    "photo": "/storage/fff9c80c1e16458db9cc1cec6cc10446.jpg?w=200",
+    "photo": "/storage/fff9c80c1e16458db9cc1cec6cc10446.jpg",
     "position": "Секретарь Комитета по финансам и бюджету",
     "y": "Запад"
   },
@@ -312,7 +312,7 @@ var fulldata=[
     "participant": 26,
     "initiator": 12,
     "id": "/ru-RU/blog/820/biography",
-    "photo": "/storage/3ded861bc406403db5f7c022600b1803.jpg?w=200",
+    "photo": "/storage/3ded861bc406403db5f7c022600b1803.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Запад"
   },
@@ -324,7 +324,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 2,
     "id": "/ru-RU/blog/316/biography",
-    "photo": "/storage/f675fb1ba80d4f868d7047b17b19c04c.jpg?w=200",
+    "photo": "/storage/f675fb1ba80d4f868d7047b17b19c04c.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Север"
   },
@@ -348,7 +348,7 @@ var fulldata=[
     "participant": 34,
     "initiator": 8,
     "id": "/ru-RU/blog/5/biography",
-    "photo": "/storage/512d00f602fe4f3c961457d30250d28a.jpg?w=200",
+    "photo": "/storage/512d00f602fe4f3c961457d30250d28a.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Север"
   },
@@ -360,7 +360,7 @@ var fulldata=[
     "participant": 17,
     "initiator": 1,
     "id": "/ru-RU/blog/177/biography",
-    "photo": "/storage/2ec410b092334fceba5398ed959af59a.jpg?w=200",
+    "photo": "/storage/2ec410b092334fceba5398ed959af59a.jpg",
     "position": "Секретарь Комитета по социально-культурному развитию и науке",
     "y": "Север"
   },
@@ -372,7 +372,7 @@ var fulldata=[
     "participant": 17,
     "initiator": 0,
     "id": "/ru-RU/blog/623/biography",
-    "photo": "/storage/6c322320ca0c400c985ec8b2405a587a.png?w=200",
+    "photo": "/storage/6c322320ca0c400c985ec8b2405a587a.png",
     "position": "Член комитета по финансам и бюджету",
     "y": "Север"
   },
@@ -384,7 +384,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 10,
     "id": "/ru-RU/blog/144/biography",
-    "photo": "/storage/ea5b7139bea84a75bbe53837202d23a0.png?w=200",
+    "photo": "/storage/ea5b7139bea84a75bbe53837202d23a0.png",
     "position": "Председатель комитета по социально-культурному развитию и науке",
     "y": "Юг"
   },
@@ -396,7 +396,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 4,
     "id": "/ru-RU/blog/295/biography",
-    "photo": "/storage/89134bd542ef49e0a06e52d21dce1b34.jpg?w=200",
+    "photo": "/storage/89134bd542ef49e0a06e52d21dce1b34.jpg",
     "position": "Член комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Юг"
   },
@@ -408,7 +408,7 @@ var fulldata=[
     "participant": 31,
     "initiator": 7,
     "id": "/ru-RU/blog/208/biography",
-    "photo": "/storage/123b04f1a77c42afac484d91202dacf7.jpg?w=200",
+    "photo": "/storage/123b04f1a77c42afac484d91202dacf7.jpg",
     "position": "Член комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Запад"
   },
@@ -420,7 +420,7 @@ var fulldata=[
     "participant": 11,
     "initiator": 2,
     "id": "/ru-RU/blog/878/biography",
-    "photo": "/storage/61b7607414694c3f84a051d9a0653d43.jpg?w=200",
+    "photo": "/storage/61b7607414694c3f84a051d9a0653d43.jpg",
     "position": "Член комитета по финансам и бюджету",
     "y": "Запад"
   },
@@ -444,7 +444,7 @@ var fulldata=[
     "participant": 20,
     "initiator": 10,
     "id": "/ru-RU/blog/635/biography",
-    "photo": "/storage/4093dabb64d247a9b28fb27dd3e0345d.jpg?w=200",
+    "photo": "/storage/4093dabb64d247a9b28fb27dd3e0345d.jpg",
     "position": "Член комитета по международным отношениям, обороне и безопасности",
     "y": "Север"
   },
@@ -468,7 +468,7 @@ var fulldata=[
     "participant": 10,
     "initiator": 6,
     "id": "/ru-RU/blog/663/biography",
-    "photo": "/storage/c41f403d1b3f421a997b4ee29035329e.jpg?w=200",
+    "photo": "/storage/c41f403d1b3f421a997b4ee29035329e.jpg",
     "position": "Председатель комитета по финансам и бюджету",
     "y": "Север"
   },
@@ -480,7 +480,7 @@ var fulldata=[
     "participant": 26,
     "initiator": 4,
     "id": "/ru-RU/blog/770/biography",
-    "photo": "/storage/48bc251ba4304e768ef227df74cb8c12.jpg?w=200",
+    "photo": "/storage/48bc251ba4304e768ef227df74cb8c12.jpg",
     "position": "Член комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Север"
   },
@@ -504,7 +504,7 @@ var fulldata=[
     "participant": 1,
     "initiator": 0,
     "id": "/ru-RU/blog/933/biography",
-    "photo": "/storage/40983dd8a212491293a6d1b98732ae88.jpg?w=200",
+    "photo": "/storage/40983dd8a212491293a6d1b98732ae88.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Указ"
   },
@@ -528,7 +528,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 12,
     "id": "/ru-RU/blog/50/biography",
-    "photo": "/storage/bce276dd89444d3991cca93c740e141f.jpg?w=200",
+    "photo": "/storage/bce276dd89444d3991cca93c740e141f.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Указ"
   },
@@ -600,7 +600,7 @@ var fulldata=[
     "participant": 16,
     "initiator": 0,
     "id": "/ru-RU/blog/520/biography",
-    "photo": "/storage/ee3177a9076b4b5b8867be703c0ea464.jpg?w=200",
+    "photo": "/storage/ee3177a9076b4b5b8867be703c0ea464.jpg",
     "position": "Председатель комитета по международным отношениям, обороне и безопасности",
     "y": "Указ"
   },
@@ -624,7 +624,7 @@ var fulldata=[
     "participant": 1,
     "initiator": 0,
     "id": "/ru-RU/blog/170/biography",
-    "photo": "/storage/f55b4a42e3e5441690abc5c76f6e16dc.jpg?w=200",
+    "photo": "/storage/f55b4a42e3e5441690abc5c76f6e16dc.jpg",
     "position": "Заместитель Председателя Сената Парламента Республики Казахстан",
     "y": "Указ"
   },
@@ -636,7 +636,7 @@ var fulldata=[
     "participant": 22,
     "initiator": 1,
     "id": "/ru-RU/blog/356/biography",
-    "photo": "/storage/1b978ea5d42642e385ba1a5ecc1ef6df.jpg?w=200",
+    "photo": "/storage/1b978ea5d42642e385ba1a5ecc1ef6df.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Указ"
   },
@@ -648,7 +648,7 @@ var fulldata=[
     "participant": 0,
     "initiator": 0,
     "id": "/ru-RU/blog/932/biography",
-    "photo": "/storage/3a995501143f49be8ebe811ddfe90050.jpg?w=200",
+    "photo": "/storage/3a995501143f49be8ebe811ddfe90050.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Указ"
   },
@@ -660,7 +660,7 @@ var fulldata=[
     "participant": 1,
     "initiator": 1,
     "id": "/ru-RU/blog/936/biography",
-    "photo": "/storage/537dfc554d7a4fd28c7f5870ad605021.jpg?w=200",
+    "photo": "/storage/537dfc554d7a4fd28c7f5870ad605021.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Указ"
   },
@@ -696,7 +696,7 @@ var fulldata=[
     "participant": 24,
     "initiator": 4,
     "id": "/ru-RU/blog/584/biography",
-    "photo": "/storage/23ddcaace56a4c4cb042a8647d4643ae.jpg?w=200",
+    "photo": "/storage/23ddcaace56a4c4cb042a8647d4643ae.jpg",
     "position": "Член комитета по международным отношениям, обороне и безопасности",
     "y": "Указ"
   },
@@ -708,7 +708,7 @@ var fulldata=[
     "participant": 0,
     "initiator": 0,
     "id": "/ru-RU/blog/935/biography",
-    "photo": "/storage/ed139ce300004573808cbd7f80ef5401.jpg?w=200",
+    "photo": "/storage/ed139ce300004573808cbd7f80ef5401.jpg",
     "position": "Заместитель Председателя Сената Парламента Республики Казахстан",
     "y": "Указ"
   },
@@ -732,7 +732,7 @@ var fulldata=[
     "participant": 18,
     "initiator": 6,
     "id": "/ru-RU/blog/601/biography",
-    "photo": "/storage/815b85acf71f43e891c50a86825c8e5c.jpg?w=200",
+    "photo": "/storage/815b85acf71f43e891c50a86825c8e5c.jpg",
     "position": "Председатель Сената Парламента Республики Казахстан",
     "y": "Указ"
   },
@@ -744,7 +744,7 @@ var fulldata=[
     "participant": 0,
     "initiator": 0,
     "id": "/ru-RU/blog/934/biography",
-    "photo": "/storage/f86121d4d6bf4b5c8ed47544fbd1687c.jpg?w=200",
+    "photo": "/storage/f86121d4d6bf4b5c8ed47544fbd1687c.jpg",
     "position": "Секретарь комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Указ"
   },
@@ -768,7 +768,7 @@ var fulldata=[
     "participant": 3,
     "initiator": 0,
     "id": "/ru-RU/blog/930/biography",
-    "photo": "/storage/071046aa572b4ce0bd8862401cd31880.jpg?w=200",
+    "photo": "/storage/071046aa572b4ce0bd8862401cd31880.jpg",
     "position": "Член комитета по международным отношениям, обороне и безопасности",
     "y": "Указ"
   },
@@ -804,7 +804,7 @@ var fulldata=[
     "participant": 20,
     "initiator": 19,
     "id": "/ru-RU/blog/232/biography",
-    "photo": "/storage/39d42742b32d4206ad846b72a6012516.jpg?w=200",
+    "photo": "/storage/39d42742b32d4206ad846b72a6012516.jpg",
     "position": "Председатель комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Указ"
   },
@@ -828,7 +828,7 @@ var fulldata=[
     "participant": 4,
     "initiator": 2,
     "id": "/ru-RU/blog/926/biography",
-    "photo": "/storage/b5ca62aab9f44865951661f08db3eb9c.jpg?w=200",
+    "photo": "/storage/b5ca62aab9f44865951661f08db3eb9c.jpg",
     "position": "Член комитета по международным отношениям, обороне и безопасности",
     "y": "Указ"
   },
@@ -852,7 +852,7 @@ var fulldata=[
     "participant": 0,
     "initiator": 0,
     "id": "/ru-RU/blog/937/biography",
-    "photo": "/storage/96d360a14d6543438a80595b6f2e16f1.jpg?w=200",
+    "photo": "/storage/96d360a14d6543438a80595b6f2e16f1.jpg",
     "position": "Член комитета по социально-культурному развитию и науке",
     "y": "Юг"
   },
@@ -864,7 +864,7 @@ var fulldata=[
     "participant": 6,
     "initiator": 0,
     "id": "/ru-RU/blog/921/biography",
-    "photo": "/storage/b5ab522a76c04845a83b6788b5f3e948.jpg?w=200",
+    "photo": "/storage/b5ab522a76c04845a83b6788b5f3e948.jpg",
     "position": "Член комитета по конституционному законодательству, судебной системе и правоохранительным органам",
     "y": "Юг"
   },
@@ -888,7 +888,7 @@ var fulldata=[
     "participant": 21,
     "initiator": 10,
     "id": "/ru-RU/blog/524/biography",
-    "photo": "/storage/ab6054d39b5e4309b053c397aaae6038.jpg?w=200",
+    "photo": "/storage/ab6054d39b5e4309b053c397aaae6038.jpg",
     "position": "Член комитета по экономической политике, инновационному развитию и предпринимательству",
     "y": "Юг"
   },
@@ -900,7 +900,7 @@ var fulldata=[
     "participant": 13,
     "initiator": 11,
     "id": "/ru-RU/blog/172/biography",
-    "photo": "/storage/252f0eb5a1e6493e95be4cc6e1344394.jpg?w=200",
+    "photo": "/storage/252f0eb5a1e6493e95be4cc6e1344394.jpg",
     "position": "Председатель комитета по аграрным вопросам, природопользованию и развитию сельских территорий",
     "y": "Юг"
   },
@@ -973,20 +973,30 @@ var draw=function(id){
 			       .attr("r", "10px")
 			       .attr("fill",d=>color(d.y))
 			       .on("mouseover",function(d){
+                     
+                     tooltip.style("display","inline")
+                            .attr("opacity",1)
+                            .style("left", (d3.event.pageX) + "px") 
+                            .style("top", (d3.event.pageY) + "px")
+                            var str=`<img src="${d.photo}" alt="Smiley face">
+                              <div class="person">
+                                <div class="metrics">
+                                <div class="val"><span>Инициатив</span><br>${d.initiator}</div>
 
-                        tooltip.html("<img src='http://localhost:1313//images/image1.png'/>")
+                                <div class="val"><span>Участий</span><br>${d.participant}</div>  
+                                </div>
+                                <div class="name">${d.name}</div>
+                            <div class="region">${d.region}</div>
+                              </div>`
+                      tooltip.html(str)
                         
-        			    tooltip
-        	                .style("display","inline")
-        			        .attr("opacity",1)
-        			        .style("left", (d3.event.pageX) + "px") 
-        			        .style("top", (d3.event.pageY) + "px")
-        			        .html(d.name+"<br>"+d.region+"<br>Участий: "+d.participant+"<br>Инициатив: "+d.initiator)
-			    })
-				    .on("mouseout",function(d){
                         
-					      d3.select(".tooltip").style("display","none")
-					    });
+                        
+                })
+                .on("mouseout",function(d){
+                    
+                      d3.select(".tooltip").attr("opacity",0)
+                    });
 
 
 	g.append("text")
