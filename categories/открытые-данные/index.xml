@@ -139,6 +139,7 @@ text{
     position: absolute; 
     text-align: center;
     width: 200px;
+    border-radius: 8px;
     height: 100px;
     display:none;
     padding: 2px;

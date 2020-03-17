@@ -976,6 +976,8 @@ var draw=function(id){
                      
                      tooltip.style("display","inline")
                             .attr("opacity",1)
+                            .style("background-color",color(d.y))
+                            .style("opacity",0.8)
                             .style("left", (d3.event.pageX) + "px") 
                             .style("top", (d3.event.pageY) + "px")
                             var str=`<img src="${d.photo}" alt="Smiley face">
