@@ -980,7 +980,8 @@ var draw=function(id){
                             .style("opacity",0.8)
                             .style("left", (d3.event.pageX) + "px") 
                             .style("top", (d3.event.pageY) + "px")
-                            var str=`<img src="${d.photo}" alt="Smiley face">
+                            var path="http://senate.parlam.kz/"+d.photo;
+                            var str=`<img src="${path}" alt="Smiley face">
                               <div class="person">
                                 <div class="metrics">
                                 <div class="val"><span>Инициатив</span><br>${d.initiator}</div>
