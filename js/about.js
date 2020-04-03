@@ -9,7 +9,7 @@ var margin={left:30,top:30,right:30, bottom:30};
               {title:"Минск",start:"2015-Mar",end:"2016-Oct"},
               {title:"Краков",start:"2016-Nov",end:"2018-Jun"},
              // {title:"Гамбург",start:"2018-Jul",end:"2018-Sep"},
-              {title:"Нью-Йорк",start:"2018-Oct",end:"2020-Apr"}];
+              {title:"Нью-Йорк",start:"2018-Oct",end:"2020-Jul"}];
   
   var colors=["#31a354","#e31a1c",
              "#dd1c77","#ff7f00",
