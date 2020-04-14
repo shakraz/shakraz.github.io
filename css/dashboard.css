@@ -12,7 +12,7 @@
   display: grid;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 90% 1fr;
+  grid-template-rows: 60% 1fr;
   grid-gap: 2px;
 }
 h2,h3{
@@ -39,7 +39,7 @@ h2,h3{
   background-color: #eee;
 }
 #filter {
-  grid-row;2/3;
+  grid-row: 2/3;
   background-color: steelblue;
 }
 
