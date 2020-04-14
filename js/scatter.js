@@ -939,40 +939,40 @@ var regions=svg.append("g")
  
 
 var draw=function(id){
-	var data = id!=null?fulldata.filter(d=>d.y==id):fulldata;
+    var data = id!=null?fulldata.filter(d=>d.y==id):fulldata;
   svg.select(".scatter").remove()
   var g = svg.append("g").attr("class","scatter")
        .attr("transform","translate("+margin.left+","+margin.top+")")
 
 
-	var x = d3.scaleLinear().domain([0,d3.max(data,d=>d.initiator)]).range([0,width])
+    var x = d3.scaleLinear().domain([0,d3.max(data,d=>d.initiator)]).range([0,width])
 
-	var xAxis = d3.axisBottom(x)
+    var xAxis = d3.axisBottom(x)
 
-	g.append("g")
-	 .attr("transform","translate(0,"+height+")")
-	 .call(xAxis)
+    g.append("g")
+     .attr("transform","translate(0,"+height+")")
+     .call(xAxis)
 
 
-	 var y = d3.scaleLinear().domain([0, d3.max(data, d=>d.participant)]).range([height,0])
-	 var yAxis = d3.axisLeft(y)
+     var y = d3.scaleLinear().domain([0, d3.max(data, d=>d.participant)]).range([height,0])
+     var yAxis = d3.axisLeft(y)
 
-	 g.append("g")
-	  .call(yAxis)
-	  .append("text")
-	  .attr("x")
+     g.append("g")
+      .call(yAxis)
+      .append("text")
+      .attr("x")
 
-	var tooltip = d3.select("body").append("div").attr("class","tooltip")
+    var tooltip = d3.select("body").append("div").attr("class","tooltip")
 
-	var circles = g.selectAll("circle")
-			       .data(data)
-			       .enter()
-			       .append("circle")
-			       .attr("cx", d=>x(d.initiator))
-			       .attr("cy", d=>y(d.participant))
-			       .attr("r", "10px")
-			       .attr("fill",d=>color(d.y))
-			       .on("mouseover",function(d){
+    var circles = g.selectAll("circle")
+                   .data(data)
+                   .enter()
+                   .append("circle")
+                   .attr("cx", d=>x(d.initiator))
+                   .attr("cy", d=>y(d.participant))
+                   .attr("r", "10px")
+                   .attr("fill",d=>color(d.y))
+                   .on("mouseover",function(d){
                      
                      tooltip.style("display","inline")
                             .attr("opacity",1)
@@ -1002,23 +1002,23 @@ var draw=function(id){
                     });
 
 
-	g.append("text")
-	 .attr("transform","translate("+width/2+","+(height+30)+")")
-	 .text("Инициативность")
+    g.append("text")
+     .attr("transform","translate("+width/2+","+(height+30)+")")
+     .text("Инициативность")
 
-	 g.append("text")
-	  .attr("transform","translate("+(-30)+","+(height/2)+") rotate(-90)")
-	  .text("Вовлеченность")
+     g.append("text")
+      .attr("transform","translate("+(-30)+","+(height/2)+") rotate(-90)")
+      .text("Вовлеченность")
 
 
-	 var line = d3.line().x(d=>d3.median(data, d=>d.initiator)).y(d=>0)
+     var line = d3.line().x(d=>d3.median(data, d=>d.initiator)).y(d=>0)
 
-	 g.append("line")
-	  .attr("x1",x(d3.mean(data, d=>d.initiator)))
-	  .attr("x2",x(d3.mean(data, d=>d.initiator)))
-	  .attr("y1",0)
-	  .attr("y2", height)
-	  .attr("stroke","#ccc")
+     g.append("line")
+      .attr("x1",x(d3.mean(data, d=>d.initiator)))
+      .attr("x2",x(d3.mean(data, d=>d.initiator)))
+      .attr("y1",0)
+      .attr("y2", height)
+      .attr("stroke","#ccc")
 
    g.append("text")
     .attr("x",x(d3.mean(data, d=>d.initiator)))
@@ -1033,12 +1033,12 @@ var draw=function(id){
     .text("Cреднее значение: "+Math.round(100*d3.mean(data, d=>d.participant))/100)
   
 
-	  g.append("line")
-	  .attr("y1",y(d3.mean(data, d=>d.participant)))
-	  .attr("y2",y(d3.mean(data, d=>d.participant)))
-	  .attr("x1",0)
-	  .attr("x2", width)
-	  .attr("stroke","#ccc")
+      g.append("line")
+      .attr("y1",y(d3.mean(data, d=>d.participant)))
+      .attr("y2",y(d3.mean(data, d=>d.participant)))
+      .attr("x1",0)
+      .attr("x2", width)
+      .attr("stroke","#ccc")
 }
 
  regions.selectAll("rect")
@@ -1056,9 +1056,9 @@ var draw=function(id){
       d3.selectAll("rect").classed("clicked",false)
       
       console.log(clicked)
-			var id=d3.select(this).attr("id")
+            var id=d3.select(this).attr("id")
       d3.select(this).classed("clicked",!clicked)
-			clicked?draw():draw(id)
+            clicked?draw():draw(id)
         })
 
 regions.selectAll("text")

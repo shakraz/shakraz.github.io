@@ -1,0 +1,121 @@
+
+@media  only screen and (max-width: 430px) {
+.main {
+  width: 100%;
+  margin: auto;
+  padding: 4px;
+}
+.dc-select-menu{
+  width: 100%;
+}
+.container {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 90% 1fr;
+  grid-gap: 2px;
+}
+h2,h3{
+  color:steelblue;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  margin-top:1px;
+}
+#piechart {
+  display: none;
+  grid-column: 1/3;
+  grid-row: 2/4;
+  background-color: #eee;
+}
+#rowchart {
+  display: none;
+  grid-column: 1/3;
+  grid-row: 4/6;
+  background-color: #eee;
+}
+
+#boxplot {
+  grid-row: 1/2;
+  background-color: #eee;
+}
+#filter {
+  grid-row;2/3;
+  background-color: steelblue;
+}
+
+li{
+  list-style: none;
+  float: none;
+  width: 100%;
+}
+}
+
+
+@media  only screen and (min-width: 431px) {
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Roboto;
+}
+li{
+  list-style: none;
+  float:left;
+  margin:5px;
+  font-size: 12px;
+}
+h1, p {
+  margin: 5px;
+}
+
+span  .axis {
+    display: none;
+  }
+
+.main {
+  width: 100%;
+  margin: auto;
+  padding: 4px;
+}
+
+h2,h3{
+  color:steelblue;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  margin-top:1px;
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 100px);
+  grid-gap: 4px;
+}
+
+#piechart {
+  grid-column: 1/3;
+  grid-row: 2/4;
+  background-color: #eee;
+}
+#rowchart {
+  grid-column: 1/3;
+  grid-row: 4/6;
+  background-color: #eee;
+}
+#boxplot {
+  grid-column: 3/6;
+  grid-row: 2/6;
+  background-color: #eee;
+}
+#filter {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  justify-content: center;
+  background-color: steelblue;
+}
+
+
+}
+
+
