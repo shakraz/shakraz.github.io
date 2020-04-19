@@ -6,10 +6,109 @@
    <description>Recent content in Blogs on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
-   <lastBuildDate>Tue, 14 Apr 2020 00:13:24 -0400</lastBuildDate>
+   <lastBuildDate>Sat, 18 Apr 2020 14:39:24 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>Сравнение жилищных комплексов г. Алматы</title>
+       <link>https://shakraz.github.io/blogs/rating/</link>
+       <pubDate>Sat, 18 Apr 2020 14:39:24 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/rating/</guid>
+       <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
+&lt;p&gt;Те, кто покупал жилье (а значит, почти все), знают, как иногда трудно сравнить между собой имеющиеся варианты. Десятки разных факторов влияют на окончательный выбор, причем цена самый очевидный из них. В конце концов, при прочих равных, оставливаются на пересечении хороший дом/хорошая квартира. Вопрос - как измерить &amp;ldquo;хороший дом&amp;rdquo; или &amp;ldquo;хорошая квартира&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
+&lt;p&gt;Данные выгружены с &lt;a href=&#34;www.korter.kz&#34;&gt;кортера&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;реализация&#34;&gt;Реализация&lt;/h2&gt;
+&lt;p&gt;Для каждого ЖК нужно рассчитать два дополнительных рейтинга : flat_rate и building_rate. Действительно, дом сам по себе может быть
+исключительно хорошим (мало домов, мало квартир, подземный паркинг, материалы итд) но квартиры могут оставлять лучшего (низкие потолки, маленькая площадь, отсутствие отделки). Перекодировав эти факторы в численные (почти все они ordered, что облегчает задачу), можно рассчитать необходимые значения. Поскольку данные разного масштаба, в процессе применялось логарифмирование&lt;/p&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width,initial-scale=1&#34;&gt;
+  &lt;meta http-equiv=&#34;content-type&#34; content=&#34;text/html; charset=utf-8&#34; lang=&#34;en&#34;&gt;
+  &lt;title&gt;Анализ цен на недвижимость&lt;/title&gt;
+&lt;style&gt;
+	.tooltip {
+	    position: absolute; 
+	    text-align: center;
+	    width: 200px;
+	    border-radius: 8px;
+	    height: 100px;
+	    display:none;
+	    padding: 2px;
+	    text-align: left;
+	    font: 10px sans-serif; 
+	}
+	 .brushed {
+	            fill: purple;
+	            stroke: purple;
+	            opacity: 1.0;
+	        }
+
+
+	table {
+	  visibility: hidden;
+	  font-family: &#34;Trebuchet MS&#34;, Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	table td, table th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+
+	table tr:nth-child(even){background-color: #f2f2f2;}
+
+	table tr:hover {background-color: #ddd;}
+
+	table th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: left;
+	  background-color: #4CAF50;
+	  color: white;
+	}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;div class=&#34;main&#34;&gt;
+&lt;h2&gt;Сравнение жилищных комплексов г.Алматы&lt;/h2&gt;
+&lt;p style=&#34;font-size:10px;font-style: italic;&#34;&gt;Данные &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1siLGmdb5OFMAmipxiuqBFS9rxq_a8lkqOeLQncku3xY/edit?usp=sharing&#34; target=&#34;blank&#34;&gt;korter.kz.&lt;/a&gt;&lt;/p&gt;
+  &lt;div class=&#34;tooltip&#34;&gt;
+    &lt;h2&gt;&lt;a href=&#34;&#34;  target=&#34;blank&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+ &lt;select id=&#39;select1&#39;&gt;
+  &lt;/select&gt;
+  &lt;div id=&#34;chart&#34;&gt;
+  &lt;/div&gt;
+ &lt;div id =&#34;table&#34;&gt;
+  &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Distric&lt;/th&gt;
+                &lt;th&gt;Name&lt;/th&gt; 
+                &lt;th&gt;Price&lt;/th&gt; 
+            &lt;/tr&gt;
+        &lt;/table&gt;
+ &lt;/div&gt;
+  &lt;div id = &#34;rowchart&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://d3js.org/d3-array.v2.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/dc.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/crossfilter.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/zk.js&#34;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
+&lt;p&gt;Понятно, что это очень упрощенный подход. Не учитывалась локация, инфрасктура и многое другое. Но это уже дело техники.
+Оценку можно значительно улучшить присвоив каждому фактору вес,его можно вычислить опытным путем либо привлечь коллективный разум.
+Вы можете заполнить форму и указать, какой,по вашему мнению, вес имеет каждый из факторов.&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>Сравнение цен на недвижимость в Алматы до и после девальвации</title>
