@@ -1,8 +1,8 @@
-var margin={left:40, right:10, top:20, bottom:10};
+var margin={left:40, right:10, top:20, bottom:40};
 var width=700;
 var height=400;
-var innerWidth = width-2*margin.left;
-var innerHeight = height-2*margin.top;
+var innerWidth = width-margin.right-margin.left;
+var innerHeight = height-margin.bottom-margin.top;
 
 d3.csv("/data/korter_final.csv").then(function(data){
 
@@ -44,7 +44,7 @@ var yAxis = d3.axisLeft(y)
 var g = svg.append("g")
        .attr("transform","translate("+margin.left+","+margin.top+")")
 
-var names = d3.map(data, d=>d.district).keys().unshift("ALL");
+var names = d3.map(data, d=>d.district).keys();
 
 d3.select("#select1").selectAll("option")
   .data(names)
@@ -52,7 +52,7 @@ d3.select("#select1").selectAll("option")
   .append("option")
   .text(d=>d)
   .attr("value",d=>d)
-  //.on("change", updateChart(d))
+
 
 
 
@@ -67,14 +67,14 @@ g.append("g")
       .attr("x1",x(d3.mean(data, d=>d.flat_rate)))
       .attr("x2",x(d3.mean(data, d=>d.flat_rate)))
       .attr("y1",0)
-      .attr("y2", height)
+      .attr("y2", innerHeight)
       .attr("stroke","red")
       .attr("opacity",0.6)
 
 
    g.append("line")
       .attr("x1",0)
-      .attr("x2",width)
+      .attr("x2",innerWidth)
       .attr("y1",y(d3.mean(data, d=>d.building_rate)))
       .attr("y2", y(d3.mean(data, d=>d.building_rate)))
       .attr("stroke","red")
@@ -89,7 +89,23 @@ g.append("g")
       .attr('class', 'brush')
       .call(brush);
 
- var houses = g.append("g")
+    g.append("text")
+     .attr("x",innerWidth/2)
+     .attr("y",innerHeight+30)
+      .style("text-anchor", "middle")
+      .attr("class","axis")
+     .text("Индекс квартир")
+
+
+     g.append("text")
+     .attr("transform", "rotate(-90)")
+     .style("text-anchor", "middle")
+     .attr("x",-150)
+     .attr("class","axis")
+     .attr("y",-30)
+     .text("Индекс дома")
+var g_circle = g.append("g")
+ var houses = g_circle
                .selectAll("circle")
                .data(data)
                .enter()
@@ -113,6 +129,36 @@ g.append("g")
                         
                 })
 
+
+
+  function updateChart(value){
+  
+    var filtered_data = data.filter(d=>d.district==value);
+    var selection = g_circle.selectAll("circle").data(filtered_data);
+
+    selection.enter().append("circle")
+           .attr("cx",d=>x(d.flat_rate))
+           .attr("cy",d=>y(d.building_rate))
+           .attr("r",d=>isNaN(priceScale(d.price))?2:priceScale(d.price) )
+           .attr("fill",d=>isNaN(d.price)?"gray":colorScale(d.district))
+            .on("mouseover",function(d){
+                           
+                           tooltip.style("display","inline")
+                                  .attr("opacity",1)
+                                  .style("left", (d3.event.pageX) + "px") 
+                                  .style("top", (d3.event.pageY) + "px")
+                                 
+                          tooltip
+                          .select("a")
+                          .attr("href",d.house_url)
+                          .html(d.name)    
+                              
+                              
+                      })
+   selection.exit().remove();
+
+
+}
 
    function highlightBrushedCircles() {
 
@@ -177,7 +223,9 @@ function clearTableRows() {
 
             var d_row_filter = [d_row.district, 
                                 d_row.name, 
-                                d_row.price];
+                                d_row.price,d_row.class_name, d_row.otdelka_name,
+                                d_row.parking_name,
+                                (d_row.building_rate+d_row.flat_rate)/2];
 
             d3.select("table")
               .append("tr")
@@ -197,7 +245,12 @@ function clearTableRows() {
         function showTableColNames() {
             d3.select("table").style("visibility", "visible");
         }
-
+d3.select("#select1").on("change", function(d) {
+        // recover the option that has been chosen
+        var selectedOption = d3.select(this).property("value")
+        // run the updateChart function with this selected option
+        updateChart(selectedOption)
+    })
 
 
   
