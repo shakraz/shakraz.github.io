@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
  <channel>
    <title>crossfilter on DATAVIZ.KZ</title>
-   <link>https://shakraz.github.io/categories/crossfilter/</link>
+   <link>www.dataviz.kz/categories/crossfilter/</link>
    <description>Recent content in crossfilter on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
    <lastBuildDate>Tue, 14 Apr 2020 00:13:24 -0400</lastBuildDate>
    
-       <atom:link href="https://shakraz.github.io/categories/crossfilter/index.xml" rel="self" type="application/rss+xml" />
+       <atom:link href="www.dataviz.kz/categories/crossfilter/index.xml" rel="self" type="application/rss+xml" />
    
    
      <item>
        <title>Сравнение жилищных комплексов г. Алматы</title>
-       <link>https://shakraz.github.io/blogs/rating/</link>
+       <link>www.dataviz.kz/blogs/rating/</link>
        <pubDate>Sat, 18 Apr 2020 14:39:24 -0400</pubDate>
        
-       <guid>https://shakraz.github.io/blogs/rating/</guid>
+       <guid>www.dataviz.kz/blogs/rating/</guid>
        <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
-&lt;p&gt;Те, кто покупал жилье (а значит, почти все), знают, как иногда трудно сравнить между собой имеющиеся варианты. Десятки разных факторов влияют на окончательный выбор, причем цена самый очевидный из них. В конце концов, при прочих равных, оставливаются на пересечении &lt;strong&gt;хороший дом/хорошая квартира&lt;/strong&gt;. Вопрос - как измерить &amp;ldquo;хороший дом&amp;rdquo; или &amp;ldquo;хорошая квартира&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Те, кто покупал жилье (а значит, почти все), знают, как иногда трудно сравнить между собой имеющиеся варианты. Десятки разных факторов влияют на окончательный выбор, причем цена самый очевидный из них. В конце концов, при прочих равных, оставливаются на пересечении   &lt;strong&gt;хороший дом/хорошая квартира&lt;/strong&gt;.  Вопрос - как измерить &amp;ldquo;хороший дом&amp;rdquo; или &amp;ldquo;хорошая квартира&amp;rdquo;&lt;/p&gt;
 &lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
 &lt;p&gt;Данные выгружены с &lt;a href=&#34;www.korter.kz&#34;&gt;кортера&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;реализация&#34;&gt;Реализация&lt;/h2&gt;
@@ -106,6 +106,7 @@
     &lt;h2&gt;&lt;a href=&#34;&#34;  target=&#34;blank&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;/div&gt;
  &lt;select id=&#39;select1&#39;&gt;
+ 	&lt;option value=&#34;All&#34;&gt;Все&lt;/option&gt;
   &lt;/select&gt;
   &lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;
@@ -125,11 +126,11 @@
   &lt;div id = &#34;rowchart&#34;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/d3.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://d3js.org/d3-array.v2.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/dc.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/crossfilter.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/zk.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/dc.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/crossfilter.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/zk.js&#34;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
@@ -141,10 +142,10 @@
    
      <item>
        <title>Сравнение цен на недвижимость в Алматы до и после девальвации</title>
-       <link>https://shakraz.github.io/blogs/third_post/</link>
+       <link>www.dataviz.kz/blogs/third_post/</link>
        <pubDate>Tue, 14 Apr 2020 00:13:24 -0400</pubDate>
        
-       <guid>https://shakraz.github.io/blogs/third_post/</guid>
+       <guid>www.dataviz.kz/blogs/third_post/</guid>
        <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
 &lt;p&gt;Простейший дашборд с поддержкой мобильной версии&lt;/p&gt;
 &lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
@@ -155,8 +156,8 @@
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width,initial-scale=1&#34;&gt;
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://shakraz.github.io/css/dashboard.css&#34;&gt;
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://shakraz.github.io/css/dc.css&#34;&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;www.dataviz.kz/css/dashboard.css&#34;&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;www.dataviz.kz/css/dc.css&#34;&gt;
 &lt;/head&gt;
 &lt;div class=&#34;main&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;javascript:dc.filterAll(); dc.renderAll();&#34;&gt;Сбросить все фильтры&lt;/a&gt;&lt;/p&gt;
@@ -178,10 +179,10 @@
    &lt;div id=&#34;boxplot&#34;&gt;&lt;h3&gt;Квантильные значения цен&lt;/h3&gt; &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
-  &lt;script src=&#34;https://shakraz.github.io/js/dc.js&#34;&gt;&lt;/script&gt;
-  &lt;script src=&#34;https://shakraz.github.io/js/crossfilter.js&#34; &gt;&lt;/script&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/charts.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/d3.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;www.dataviz.kz/js/dc.js&#34;&gt;&lt;/script&gt;
+  &lt;script src=&#34;www.dataviz.kz/js/crossfilter.js&#34; &gt;&lt;/script&gt;
+&lt;script src=&#34;www.dataviz.kz/js/charts.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
@@ -192,10 +193,10 @@
    
      <item>
        <title>Сальдо внешней миграции по специальностям и регионам за 2000-2019 гг.</title>
-       <link>https://shakraz.github.io/blogs/saldo/</link>
+       <link>www.dataviz.kz/blogs/saldo/</link>
        <pubDate>Sun, 15 Mar 2020 14:18:10 -0400</pubDate>
        
-       <guid>https://shakraz.github.io/blogs/saldo/</guid>
+       <guid>www.dataviz.kz/blogs/saldo/</guid>
        <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
 &lt;p&gt;Визуализация сальдо миграции в разрезе областей и специальностей. Показаны агрегированные значения&lt;/p&gt;
 &lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
@@ -244,11 +245,11 @@ body{
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
+  &lt;script src=&#34;www.dataviz.kz/js/d3.js&#34;&gt;&lt;/script&gt; 
 &lt;div class=&#34;tooltip&#34;&gt; &lt;/div&gt;
   &lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/heatmap.js&#34;&gt;&lt;/script&gt; 
+&lt;script src=&#34;www.dataviz.kz/js/heatmap.js&#34;&gt;&lt;/script&gt; 
 &lt;/body&gt; 
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
@@ -258,10 +259,10 @@ body{
    
      <item>
        <title>Депутатские запросы сенаторов РК. 6 созыв</title>
-       <link>https://shakraz.github.io/blogs/deputies/</link>
+       <link>www.dataviz.kz/blogs/deputies/</link>
        <pubDate>Sun, 15 Mar 2020 12:15:04 -0400</pubDate>
        
-       <guid>https://shakraz.github.io/blogs/deputies/</guid>
+       <guid>www.dataviz.kz/blogs/deputies/</guid>
        <description>&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
 &lt;p&gt;Визуализировать деятельность депутатов Сената РК 6 созыва.&lt;/p&gt;
 &lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
@@ -281,13 +282,13 @@ body{
 &lt;html dir=&#34;ltr&#34; lang=&#34;en&#34;&gt;
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://shakraz.github.io/css/deputies.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;www.dataviz.kz/css/deputies.css&#34;&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt; 
+  &lt;script src=&#34;www.dataviz.kz/js/d3.js&#34;&gt;&lt;/script&gt; 
   &lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/scatter.js&#34;&gt;&lt;/script&gt; 
+&lt;script src=&#34;www.dataviz.kz/js/scatter.js&#34;&gt;&lt;/script&gt; 
 &lt;/body&gt; 
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;

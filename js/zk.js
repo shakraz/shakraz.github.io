@@ -45,6 +45,9 @@ var g = svg.append("g")
        .attr("transform","translate("+margin.left+","+margin.top+")")
 
 var names = d3.map(data, d=>d.district).keys();
+var names2 = Object.values(names)
+console.log(Array.from(names2))
+console.log(typeof(names))
 
 d3.select("#select1").selectAll("option")
   .data(names)
@@ -114,7 +117,7 @@ var g_circle = g.append("g")
 updateChart();
 
   function updateChart(value){
-      var filtered_data =  value!=undefined?data.filter(d=>d.district==value):data;
+      var filtered_data =  value==undefined|value=="All"?data:data.filter(d=>d.district==value);
       d3.selectAll("circle").remove()
       houses = g_circle.selectAll("circle").data(filtered_data);
       
