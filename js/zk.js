@@ -104,67 +104,55 @@ g.append("g")
      .attr("class","axis")
      .attr("y",-30)
      .text("Индекс дома")
+
 var g_circle = g.append("g")
+
  var houses = g_circle
                .selectAll("circle")
-               .data(data)
-               .enter()
-               .append("circle")
-               .attr("cx",d=>x(d.flat_rate))
-               .attr("cy",d=>y(d.building_rate))
-               .attr("r",d=>isNaN(priceScale(d.price))?2:priceScale(d.price) )
-               .attr("fill",d=>isNaN(d.price)?"gray":colorScale(d.district))
-               .on("mouseover",function(d){
-                     
-                     tooltip.style("display","inline")
-                            .attr("opacity",1)
-                            .style("left", (d3.event.pageX) + "px") 
-                            .style("top", (d3.event.pageY) + "px")
-                           
-                    tooltip
-                    .select("a")
-                    .attr("href",d.house_url)
-                    .html(d.name)    
-                        
-                        
-                })
+               
 
-
+updateChart();
 
   function updateChart(value){
-  
-    var filtered_data = data.filter(d=>d.district==value);
-    var selection = g_circle.selectAll("circle").data(filtered_data);
-
-    selection.enter().append("circle")
-           .attr("cx",d=>x(d.flat_rate))
-           .attr("cy",d=>y(d.building_rate))
-           .attr("r",d=>isNaN(priceScale(d.price))?2:priceScale(d.price) )
-           .attr("fill",d=>isNaN(d.price)?"gray":colorScale(d.district))
-            .on("mouseover",function(d){
-                           
-                           tooltip.style("display","inline")
-                                  .attr("opacity",1)
-                                  .style("left", (d3.event.pageX) + "px") 
-                                  .style("top", (d3.event.pageY) + "px")
-                                 
-                          tooltip
-                          .select("a")
-                          .attr("href",d.house_url)
-                          .html(d.name)    
-                              
-                              
-                      })
-   selection.exit().remove();
+      var filtered_data =  value!=undefined?data.filter(d=>d.district==value):data;
+      d3.selectAll("circle").remove()
+      houses = g_circle.selectAll("circle").data(filtered_data);
+      
+ 
+      houses.enter().append("circle")
+             .attr("cx",d=>x(d.flat_rate))
+             .attr("cy",d=>y(d.building_rate))
+             .attr("r",d=>isNaN(priceScale(d.price))?2:priceScale(d.price) )
+             .attr("fill",d=>isNaN(d.price)?"gray":colorScale(d.district))
+             .attr("class", "non_brushed")
+              .on("mouseover",function(d){
+                             
+                             tooltip.style("display","inline")
+                                    .attr("opacity",1)
+                                    .style("left", (d3.event.pageX) + "px") 
+                                    .style("top", (d3.event.pageY) + "px")
+                                   
+                            tooltip
+                            .select("a")
+                            .attr("href",d.house_url)
+                            .html(d.name)    
+                                
+                                
+                        })
+        houses.exit().remove();
+     
 
 
 }
+
+
 
    function highlightBrushedCircles() {
 
                 if (d3.event.selection != null) {
 
                     // revert circles to initial style
+                    var houses = d3.selectAll("circle")
                     houses.attr("class", "non_brushed");
 
                     var brush_coords = d3.brushSelection(this);
