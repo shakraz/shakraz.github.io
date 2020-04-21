@@ -157,85 +157,56 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="content-type" content="text/html; charset=utf-8" lang="en">
   <title>Анализ цен на недвижимость</title>
+  <link rel="stylesheet" href="dc.css">
 <style>
-	.tooltip {
-	    position: absolute; 
-	    text-align: center;
-	    width: 200px;
-	    border-radius: 8px;
-	    height: 100px;
-	    display:none;
-	    padding: 2px;
-	    text-align: left;
-	    font: 10px sans-serif; 
+      .node text{
+      	font-size:8px;
+      }
+      .x-axis-label,.y-axis-label{
+      	font-size:14px;
+      	color:gray;
+      }
+	  .main{
+	    display:grid;
+	    grid-gap:2px;
+	    grid-template-columns:1fr 1fr;
+	    grid-template-rows:250px 280px 50px 1fr;
+	  }
+
+	  #chart{
+	    grid-column:1/3;
+	    grid-row:1/3;
+	  }
+	  #search{
+	    grid-column:1/3;
+	    
+	  }
+	  #filter1{
+	    grid-column:1/2;
+	  }
+
+	  #filter2{
+	    grid-column:2/3;
 	}
-	 .brushed {
-	            fill: purple;
-	            stroke: purple;
-	            opacity: 1.0;
-	        }
-
-
-	table {
-	  visibility: hidden;
-	  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	  border-collapse: collapse;
-	  width: 100%;
+	#search input{
+	  width: 100%
 	}
 
-	table td, table th {
-	  border: 1px solid #ddd;
-	  padding: 8px;
-	}
-
-	table tr:nth-child(even){background-color: #f2f2f2;}
-
-	table tr:hover {background-color: #ddd;}
-
-	table th {
-	  padding-top: 12px;
-	  padding-bottom: 12px;
-	  text-align: left;
-	  background-color: steelblue;
-	  color: white;
-	}
-.axis{
-	font-size: 12px;
-	fill:gray;
-}
 </style>
 </head>
-<div class="main">
-<p style="font-size:10px;font-style: italic;">Данные <a href="https://docs.google.com/spreadsheets/d/1siLGmdb5OFMAmipxiuqBFS9rxq_a8lkqOeLQncku3xY/edit?usp=sharing" target="blank">korter.kz.</a></p>
-  <div class="tooltip">
-    <h2><a href=""  target="blank"></a></h2>
+<div class='main'>
+<div id="chart">
   </div>
- <select id='select1'>
- 	<option value="All">Все</option>
-  </select>
-  <div id="chart">
+  <div id="search"><a href="javascript:dc.filterAll(); dc.renderAll();">Сбросить все фильтры</a>
   </div>
- <div id ="table">
-  <table>
-            <tr>
-                <th>Район</th>
-                <th>Название</th> 
-                <th>Цена</th> 
-                <th>Класс</th>
-                <th>Отделка</th> 
-                <th>Паркинг</th> 
-                <th>Средний рейтинг</th> 
-            </tr>
-        </table>
- </div>
-  <div id = "rowchart">
-  </div>
+  <div id="filter1"><h3>Район</h3></div>
+  <div id="filter2"><h3>Класс жилья</h3></div>
 </div>
 <script src="https://shakraz.github.io/js/d3.js"></script>
 <script src="https://d3js.org/d3-array.v2.min.js"></script>
 <script src="https://shakraz.github.io/js/dc.js"></script>
 <script src="https://shakraz.github.io/js/crossfilter.js"></script>
-<script src="https://shakraz.github.io/js/zk.js"></script>
+<script src="https://shakraz.github.io/js/zk2.js"></script>
 </body>
 </html>
 <h2 id="вывод">Вывод</h2>

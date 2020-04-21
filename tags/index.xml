@@ -52,85 +52,56 @@
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width,initial-scale=1&#34;&gt;
   &lt;meta http-equiv=&#34;content-type&#34; content=&#34;text/html; charset=utf-8&#34; lang=&#34;en&#34;&gt;
   &lt;title&gt;Анализ цен на недвижимость&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;dc.css&#34;&gt;
 &lt;style&gt;
-	.tooltip {
-	    position: absolute; 
-	    text-align: center;
-	    width: 200px;
-	    border-radius: 8px;
-	    height: 100px;
-	    display:none;
-	    padding: 2px;
-	    text-align: left;
-	    font: 10px sans-serif; 
+      .node text{
+      	font-size:8px;
+      }
+      .x-axis-label,.y-axis-label{
+      	font-size:14px;
+      	color:gray;
+      }
+	  .main{
+	    display:grid;
+	    grid-gap:2px;
+	    grid-template-columns:1fr 1fr;
+	    grid-template-rows:250px 280px 50px 1fr;
+	  }
+
+	  #chart{
+	    grid-column:1/3;
+	    grid-row:1/3;
+	  }
+	  #search{
+	    grid-column:1/3;
+	    
+	  }
+	  #filter1{
+	    grid-column:1/2;
+	  }
+
+	  #filter2{
+	    grid-column:2/3;
 	}
-	 .brushed {
-	            fill: purple;
-	            stroke: purple;
-	            opacity: 1.0;
-	        }
-
-
-	table {
-	  visibility: hidden;
-	  font-family: &#34;Trebuchet MS&#34;, Arial, Helvetica, sans-serif;
-	  border-collapse: collapse;
-	  width: 100%;
+	#search input{
+	  width: 100%
 	}
 
-	table td, table th {
-	  border: 1px solid #ddd;
-	  padding: 8px;
-	}
-
-	table tr:nth-child(even){background-color: #f2f2f2;}
-
-	table tr:hover {background-color: #ddd;}
-
-	table th {
-	  padding-top: 12px;
-	  padding-bottom: 12px;
-	  text-align: left;
-	  background-color: steelblue;
-	  color: white;
-	}
-.axis{
-	font-size: 12px;
-	fill:gray;
-}
 &lt;/style&gt;
 &lt;/head&gt;
-&lt;div class=&#34;main&#34;&gt;
-&lt;p style=&#34;font-size:10px;font-style: italic;&#34;&gt;Данные &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1siLGmdb5OFMAmipxiuqBFS9rxq_a8lkqOeLQncku3xY/edit?usp=sharing&#34; target=&#34;blank&#34;&gt;korter.kz.&lt;/a&gt;&lt;/p&gt;
-  &lt;div class=&#34;tooltip&#34;&gt;
-    &lt;h2&gt;&lt;a href=&#34;&#34;  target=&#34;blank&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#39;main&#39;&gt;
+&lt;div id=&#34;chart&#34;&gt;
   &lt;/div&gt;
- &lt;select id=&#39;select1&#39;&gt;
- 	&lt;option value=&#34;All&#34;&gt;Все&lt;/option&gt;
-  &lt;/select&gt;
-  &lt;div id=&#34;chart&#34;&gt;
+  &lt;div id=&#34;search&#34;&gt;&lt;a href=&#34;javascript:dc.filterAll(); dc.renderAll();&#34;&gt;Сбросить все фильтры&lt;/a&gt;
   &lt;/div&gt;
- &lt;div id =&#34;table&#34;&gt;
-  &lt;table&gt;
-            &lt;tr&gt;
-                &lt;th&gt;Район&lt;/th&gt;
-                &lt;th&gt;Название&lt;/th&gt; 
-                &lt;th&gt;Цена&lt;/th&gt; 
-                &lt;th&gt;Класс&lt;/th&gt;
-                &lt;th&gt;Отделка&lt;/th&gt; 
-                &lt;th&gt;Паркинг&lt;/th&gt; 
-                &lt;th&gt;Средний рейтинг&lt;/th&gt; 
-            &lt;/tr&gt;
-        &lt;/table&gt;
- &lt;/div&gt;
-  &lt;div id = &#34;rowchart&#34;&gt;
-  &lt;/div&gt;
+  &lt;div id=&#34;filter1&#34;&gt;&lt;h3&gt;Район&lt;/h3&gt;&lt;/div&gt;
+  &lt;div id=&#34;filter2&#34;&gt;&lt;h3&gt;Класс жилья&lt;/h3&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://d3js.org/d3-array.v2.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://shakraz.github.io/js/dc.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://shakraz.github.io/js/crossfilter.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://shakraz.github.io/js/zk.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://shakraz.github.io/js/zk2.js&#34;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 &lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
