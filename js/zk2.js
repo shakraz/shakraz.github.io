@@ -69,6 +69,7 @@ var searchText = new dc.TextFilterWidget("#search").placeHolder('Застрой�
 scatter
     .width(900)
     .height(500)
+    .useViewBoxResizing(true)
     .x(x)
     .y(y)
     .yAxisLabel("Индекс дома")
@@ -154,6 +155,7 @@ scatter
 rowchart
         .width(400)
         .height(300)
+    .useViewBoxResizing(true)
         .x(d3.scaleLinear().domain([0,100]).range([0,200]))
         .elasticX(true)
 
@@ -166,6 +168,7 @@ rowchart
 rowchart2
         .width(400)
         .height(300)
+    .useViewBoxResizing(true)
         .x(d3.scaleLinear().domain([0,100]).range([0,200]))
         .elasticX(true)
         .rowsCap(8)
