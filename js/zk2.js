@@ -158,7 +158,6 @@ rowchart
     .useViewBoxResizing(true)
         .x(d3.scaleLinear().domain([0,100]).range([0,200]))
         .elasticX(true)
-
         .rowsCap(8)
         .title(function(d){return d.value;})
         .colors(colorScale)

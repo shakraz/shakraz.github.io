@@ -5,7 +5,7 @@
   }
 @media  only screen and (max-width: 430px) {
       .node text{
-        font-size:8px;
+        font-size:12px;
       }
       .x-axis-label,.y-axis-label{
         font-size:14px;
@@ -62,7 +62,7 @@ body {
     margin-left: 30px;
   }
       .node text{
-        font-size:8px;
+        font-size:10px;
       }
       .x-axis-label,.y-axis-label{
         font-size:14px;
