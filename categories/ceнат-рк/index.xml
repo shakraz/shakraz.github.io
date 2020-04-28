@@ -54,7 +54,7 @@
 &lt;div class=&#39;main&#39;&gt;
 &lt;div id=&#34;chart&#34;&gt;	
 &lt;/div&gt;
-&lt;a href=&#34;javascript:dc.filterAll(); dc.renderAll();&#34;&gt;Сбросить все фильтры&lt;/a&gt;
+&lt;a href=&#34;javascript:dc.filterAll(); dc.renderAll();&#34; style=&#34;font-size:10px&#34;&gt;Сбросить все фильтры&lt;/a&gt;
 &lt;div id=&#34;search&#34;&gt;
 &lt;/div&gt;
 &lt;div id=&#34;filter1&#34;&gt;&lt;p&gt;Район&lt;/p&gt;&lt;/div&gt;
