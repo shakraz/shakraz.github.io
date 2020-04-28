@@ -129,41 +129,39 @@
 
     
     <h2 id="идея">Идея</h2>
-<p>Простейший дашборд с поддержкой мобильной версии</p>
-<h2 id="данные">Данные</h2>
-<p>Простая визуализация на основе данных известного сайта.</p>
+<p>Простейший дашборд с поддержкой мобильной версии.</p>
 <h2 id="как-пользоваться">Как пользоваться</h2>
 <p>Просто выберите фильтры (Район, Микрорайон, Состояние, Количество комнат, Опубликовавший)</p>
 <html dir="ltr" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://shakraz.github.io/css/dashboard.css">
-  <link rel="stylesheet" href="https://shakraz.github.io/css/dc.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://shakraz.github.io/css/dashboard.css">
+<link rel="stylesheet" href="https://shakraz.github.io/css/dc.css">
 </head>
 <div class="main">
 <p><a href="javascript:dc.filterAll(); dc.renderAll();">Сбросить все фильтры</a></p>
-  <div class="container">
-   <div id="filter">
-      <ul>
-      <li id="select1"></li>
-      <li id="select2"></li>
-      <li id="select3"></li>
-      <li id="select4"></li>
-      <li id="select5"></li>
+<div class="container">
+<div id="filter">
+<ul>
+<li id="select1"></li>
+<li id="select2"></li>
+<li id="select3"></li>
+<li id="select4"></li>
+<li id="select5"></li>
 </ul>
 </div>
-  <div id="piechart">
-    <h3>Состояние</h3>
-    </div>
-   <div id="rowchart">
-    <h3>Материал дома</h3></div>
-   <div id="boxplot"><h3>Квантильные значения цен</h3> </div>
-  </div>
+<div id="piechart">
+<h3>Состояние</h3>
+</div>
+<div id="rowchart">
+<h3>Материал дома</h3></div>
+<div id="boxplot"><h3>Квантильные значения цен</h3> </div>
+</div>
 </div>
 <script src="https://shakraz.github.io/js/d3.js"></script>
-  <script src="https://shakraz.github.io/js/dc.js"></script>
-  <script src="https://shakraz.github.io/js/crossfilter.js" ></script>
+<script src="https://shakraz.github.io/js/dc.js"></script>
+<script src="https://shakraz.github.io/js/crossfilter.js" ></script>
 <script src="https://shakraz.github.io/js/charts.js" type="text/javascript"></script>
 </body>
 </html>

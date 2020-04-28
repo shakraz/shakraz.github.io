@@ -43,7 +43,7 @@ h2,h3{
   background-color: steelblue;
 }
 
-li{
+#filter li{
   list-style: none;
   float: none;
   width: 100%;
@@ -58,7 +58,7 @@ body {
 
   font-family: Roboto;
 }
-li{
+#filter  li{
   list-style: none;
   float:left;
   margin:5px;
@@ -78,12 +78,10 @@ span  .axis {
   padding: 4px;
 }
 
-h2,h3{
-  color:steelblue;
-  margin-bottom: 1px;
-  margin-left: 5px;
-  margin-top:1px;
+h3{
+  margin:0;
 }
+
 
 .container {
   display: grid;

@@ -124,8 +124,6 @@
     
     <h2 id="идея">Идея</h2>
 <p>Те, кто покупал жилье (а значит, почти все), знают, как иногда трудно сравнить между собой имеющиеся варианты. Десятки разных факторов влияют на окончательный выбор, причем цена самый очевидный из них. В конце концов, при прочих равных, оставливаются на пересечении   <strong>хороший дом/хорошая квартира</strong>.  Вопрос - как измерить &ldquo;хороший дом&rdquo; или &ldquo;хорошая квартира&rdquo;</p>
-<h2 id="данные">Данные</h2>
-<p>Данные выгружены с <a href="www.korter.kz">кортера</a>.</p>
 <h2 id="реализация">Реализация</h2>
 <p>Для каждого ЖК нужно рассчитать два дополнительных рейтинга : <strong>flat_rate</strong> и <strong>building_rate</strong>. Действительно, дом сам по себе может быть
 исключительно хорошим (мало домов, мало квартир, подземный паркинг, материалы итд) но квартиры могут оставлять лучшего (низкие потолки, маленькая площадь, отсутствие отделки). Перекодировав эти факторы в численные (почти все они ordered, что облегчает задачу), можно рассчитать необходимые значения. Поскольку данные разного масштаба, в процессе применялось логарифмирование и нормирование</p>
@@ -151,28 +149,26 @@
 <li>Красные линии это средние значения, все, что выше/правее среднего, может быть потенциально интересно</li>
 <li>Выделить точки на графике, размер точки пропорционален стоймости кв.метра</li>
 </ul>
-<!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" lang="en">
-  <title>Анализ цен на недвижимость</title>
-  <link rel="stylesheet" href="https://shakraz.github.io/css/dc.css">
-    <link rel="stylesheet" href="https://shakraz.github.io/css/rating.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://shakraz.github.io/css/rating.css">
+<link rel="stylesheet" href="https://shakraz.github.io/css/dc.css">
 </head>
 <div class='main'>
-<div id="chart">
-  </div>
-  <div id="search"><a href="javascript:dc.filterAll(); dc.renderAll();">Сбросить все фильтры</a>
-  </div>
-  <div id="filter1"><p>Район</p></div>
-  <div id="filter2"><p>Класс жилья</p></div>
+<div id="chart">	
+</div>
+<a href="javascript:dc.filterAll(); dc.renderAll();">Сбросить все фильтры</a>
+<div id="search">
+</div>
+<div id="filter1"><p>Район</p></div>
+<div id="filter2"><p>Класс жилья</p></div>  
 </div>
 <script src="https://shakraz.github.io/js/d3.js"></script>
-<script src="https://d3js.org/d3-array.v2.min.js"></script>
 <script src="https://shakraz.github.io/js/dc.js"></script>
 <script src="https://shakraz.github.io/js/crossfilter.js"></script>
-<script src="https://shakraz.github.io/js/zk2.js"></script>
+<script src="https://shakraz.github.io/js/zk2.js"  type="text/javascript"></script>
 </body>
 </html>
 <h2 id="вывод">Вывод</h2>
