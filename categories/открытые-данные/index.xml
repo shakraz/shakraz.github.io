@@ -6,10 +6,34 @@
    <description>Recent content in Открытые данные on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
-   <lastBuildDate>Sat, 18 Apr 2020 14:39:24 -0400</lastBuildDate>
+   <lastBuildDate>Wed, 29 Apr 2020 18:13:48 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/categories/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>Источники данных</title>
+       <link>https://shakraz.github.io/blogs/sources/</link>
+       <pubDate>Wed, 29 Apr 2020 18:13:48 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/sources/</guid>
+       <description>&lt;p&gt;Редко когда получается найти данные сразу пригодные для визуализации, чаще всего этому предшествует большой объем подготовительной работы. Ниже представлен небольшой список источников данных, которым я пользуюсь.&lt;/p&gt;
+&lt;h2 id=&#34;открыте-данные-электронного-правительстваdataegovkz&#34;&gt;&lt;a href=&#34;data.egov.kz&#34;&gt;Открыте данные электронного правительства&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Насколько дорогой, настолько и бесполезный сайт. Если запастить терпением и дождаться, когда загрузиться главная, можно убедиться в следующих недостатках:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ограничение на загрузку&lt;/strong&gt; Трудно понять, чем руководствовались, когда задавали лимит только в 100 строк.&lt;img src=&#34;https://shakraz.github.io/images/egov.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Ценность данных. Огромное количество никому не нужных списков и справочников.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;комитет-статистики-ркtaldaustatgovkz&#34;&gt;&lt;a href=&#34;taldau.stat.gov.kz&#34;&gt;Комитет статистики РК&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Самый полезный источник. Огромное количество информации в различных разрезах. Есть внутренний построитель отчетов (очень неудобный). Из минусов нет выгрузки в json&lt;/p&gt;
+&lt;h2 id=&#34;комитет-по-правовой-статистикеhttpsqamqorgovkzanalyticsindexhtml&#34;&gt;&lt;a href=&#34;https://qamqor.gov.kz/analytics/index.html&#34;&gt;Комитет по правовой статистике&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Почти не пользовался. На момент написания, так и не загрузился.&lt;/p&gt;
+&lt;h2 id=&#34;scrapping&#34;&gt;Scrapping&lt;/h2&gt;
+&lt;p&gt;Строго говоря, это не источник, конечно. Скорее, инструмент. Но для всех, кто интересуется, обязателен к освоению.  Чаще всего пользуюсь связкой &lt;a href=&#34;rstudio.com&#34;&gt;RStudio&lt;/a&gt;/&lt;a href=&#34;https://github.com/tidyverse/rvest&#34;&gt;rvest&lt;/a&gt;. Есть еще &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/&#34;&gt;BeautifulSoup&lt;/a&gt;, для тех, кто знает Python.&lt;/p&gt;
+&lt;h2 id=&#34;osm&#34;&gt;OSM&lt;/h2&gt;
+&lt;p&gt;Незаменимый источник geo данных. Чаще всего пользуюсь интерфейсом &lt;a href=&#34;https://nominatim.openstreetmap.org/&#34;&gt;Nominatim&lt;/a&gt;. Из недостатков отмечу качество данных и их актуальность.&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>Сравнение жилищных комплексов г. Алматы</title>
