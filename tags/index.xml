@@ -6,10 +6,33 @@
    <description>Recent content in Tags on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
-   <lastBuildDate>Sun, 15 Mar 2020 12:15:04 -0400</lastBuildDate>
+   <lastBuildDate>Tue, 14 Jul 2020 23:04:57 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>1001-й covid-дашборд</title>
+       <link>https://shakraz.github.io/blogs/covid/</link>
+       <pubDate>Tue, 14 Jul 2020 23:04:57 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/covid/</guid>
+       <description>&lt;hr&gt;
+&lt;h2 id=&#34;идея&#34;&gt;Идея&lt;/h2&gt;
+&lt;p&gt;Простой интерактивный отчет по ковид-статистике  Казахстана и других стран. Вдохновился &lt;a href=&#34;https://www.youtube.com/post/UgynI5LW6kpMqDvkqz54AaABCQ&#34;&gt;постом&lt;/a&gt; известного казахстанского журналиста Вадима Борейко.&lt;/p&gt;
+&lt;h2 id=&#34;данные&#34;&gt;Данные&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Данные взяты с &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;репозитория университета Джонса Хопхинса (США)&lt;/a&gt; на 07.14. К сожалению, детальных данных по регионам не нашел (привет, egov и хваленые открытые данные). Если у кого есть заслуживающий доверия источник, буду благодарен, если поделитесь.
+Также добавил усредненные значения для всех стран за исключением КЗ (World).&lt;/li&gt;
+&lt;li&gt;Смертность (%)-процент смертей к количеству заболевших&lt;/li&gt;
+&lt;li&gt;Прирост- новые случаи с предыдущего дня&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#39;http://52.144.47.109:3838/sample-apps/covid_shiny/&#39; style=&#34;border: 0&#34; width=&#34;100%&#34; height=&#34;1000&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;вывод&#34;&gt;Вывод&lt;/h2&gt;
+&lt;p&gt;Данные КЗ по смертности на первый взгляд действительно выглядят странно (особенно  принимая во внимание новые случаи на 100000 населения, который более-менее одинаков для КЗ/мир). Однако это очень поверхностный вывод поскольку не анализировались выбросы, нормальность распределения и многое другое.&lt;/p&gt;
+&lt;p&gt;Пост будет обновляться, добавлю новые чарты и метрики.&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>Источники данных</title>

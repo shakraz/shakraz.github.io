@@ -7,19 +7,19 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="открытые данные Казахстана, визуализация, d3, визуализация недвижимости" />
-<meta name="author" content="Oraz Shakirov, Ораз Шакиров" /><meta property="og:title" content="Источники данных" />
-<meta property="og:description" content="Источники данных для визуализаций и не только" />
+<meta name="author" content="Oraz Shakirov, Ораз Шакиров" /><meta property="og:title" content="1001-й covid-дашборд" />
+<meta property="og:description" content="Сравнение статистики случаев COVID-19 по Казахстану и миру" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://shakraz.github.io/blogs/sources/" />
-<meta property="og:image" content="https://shakraz.github.io/images/opendata.png" />
-<meta property="article:published_time" content="2020-04-29T18:13:48-04:00" />
-<meta property="article:modified_time" content="2020-04-29T18:13:48-04:00" />
+<meta property="og:url" content="https://shakraz.github.io/blogs/covid/" />
+<meta property="og:image" content="https://shakraz.github.io/images/covid.png" />
+<meta property="article:published_time" content="2020-07-14T23:04:57-04:00" />
+<meta property="article:modified_time" content="2020-07-14T23:04:57-04:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://shakraz.github.io/images/opendata.png"/>
+<meta name="twitter:image" content="https://shakraz.github.io/images/covid.png"/>
 
-<meta name="twitter:title" content="Источники данных"/>
-<meta name="twitter:description" content="Источники данных для визуализаций и не только"/>
+<meta name="twitter:title" content="1001-й covid-дашборд"/>
+<meta name="twitter:description" content="Сравнение статистики случаев COVID-19 по Казахстану и миру"/>
 
 <meta name="generator" content="Hugo 0.66.0" />
     
@@ -84,13 +84,13 @@
 
 <article>
 
-    <h1>Источники данных</h1>
+    <h1>1001-й covid-дашборд</h1>
 
     
       <aside>
     <ul>
         <li>
-            <time class="post-date" datetime="2020-04-29T18:13:48-04:00">Apr 29, 2020</time>
+            <time class="post-date" datetime="2020-07-14T23:04:57-04:00">Jul 14, 2020</time>
         </li>
         
         <li>
@@ -98,15 +98,24 @@
             <em>
                 
                     
-                    <a href="https://shakraz.github.io/categories/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5">Открытые данные</a>
+                    <a href="https://shakraz.github.io/categories/covid">covid</a>
                 
                     , 
-                    <a href="https://shakraz.github.io/categories/%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5">разное</a>
+                    <a href="https://shakraz.github.io/categories/shiny">shiny</a>
                 
             </em>
         </li>
         
 
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://shakraz.github.io/tags/dashoard">#dashoard</a>
+                
+            </em>
+        </li>
         
 
         <li>One minute read</li>
@@ -116,21 +125,20 @@
     
 
     
-    <p>Редко когда получается найти данные сразу пригодные для визуализации, чаще всего этому предшествует большой объем подготовительной работы. Ниже представлен небольшой список источников данных, которым я пользуюсь.</p>
-<h2 id="открыте-данные-электронного-правительстваdataegovkz"><a href="data.egov.kz">Открыте данные электронного правительства</a></h2>
-<p>Насколько дорогой, настолько и бесполезный сайт. Если запастить терпением и дождаться, когда загрузиться главная, можно убедиться в следующих недостатках:</p>
+    <hr>
+<h2 id="идея">Идея</h2>
+<p>Простой интерактивный отчет по ковид-статистике  Казахстана и других стран. Вдохновился <a href="https://www.youtube.com/post/UgynI5LW6kpMqDvkqz54AaABCQ">постом</a> известного казахстанского журналиста Вадима Борейко.</p>
+<h2 id="данные">Данные</h2>
 <ul>
-<li><strong>Ограничение на загрузку</strong> Трудно понять, чем руководствовались, когда задавали лимит только в 100 строк.<img src="https://shakraz.github.io/images/egov.png" alt=""></li>
-<li>Ценность данных. Огромное количество никому не нужных списков и справочников.</li>
+<li>Данные взяты с <a href="https://github.com/CSSEGISandData/COVID-19">репозитория университета Джонса Хопхинса (США)</a> на 07.14. К сожалению, детальных данных по регионам не нашел (привет, egov и хваленые открытые данные). Если у кого есть заслуживающий доверия источник, буду благодарен, если поделитесь.
+Также добавил усредненные значения для всех стран за исключением КЗ (World).</li>
+<li>Смертность (%)-процент смертей к количеству заболевших</li>
+<li>Прирост- новые случаи с предыдущего дня</li>
 </ul>
-<h2 id="комитет-статистики-ркtaldaustatgovkz"><a href="taldau.stat.gov.kz">Комитет статистики РК</a></h2>
-<p>Самый полезный источник. Огромное количество информации в различных разрезах. Есть внутренний построитель отчетов</p>
-<h2 id="комитет-по-правовой-статистикеhttpsqamqorgovkzanalyticsindexhtml"><a href="https://qamqor.gov.kz/analytics/index.html">Комитет по правовой статистике</a></h2>
-<p>Почти не пользовался. На момент написания, так и не загрузился.</p>
-<h2 id="scrapping">Scrapping</h2>
-<p>Строго говоря, это не источник, конечно. Скорее, инструмент. Но для всех, кто интересуется, обязателен к освоению.  Чаще всего пользуюсь связкой <a href="rstudio.com">RStudio</a>/<a href="https://github.com/tidyverse/rvest">rvest</a>. Есть еще <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, для тех, кто знает Python.</p>
-<h2 id="osm">OSM</h2>
-<p>Незаменимый источник geo данных. Чаще всего пользуюсь интерфейсом <a href="https://nominatim.openstreetmap.org/">Nominatim</a>. Из недостатков отмечу качество данных и их актуальность.</p>
+<iframe src='http://52.144.47.109:3838/sample-apps/covid_shiny/' style="border: 0" width="100%" height="1000" frameborder="0" scrolling="no"></iframe>
+<h2 id="вывод">Вывод</h2>
+<p>Данные КЗ по смертности на первый взгляд действительно выглядят странно (особенно  принимая во внимание новые случаи на 100000 населения, который более-менее одинаков для КЗ/мир). Однако это очень поверхностный вывод поскольку не анализировались выбросы, нормальность распределения и многое другое.</p>
+<p>Пост будет обновляться, добавлю новые чарты и метрики.</p>
 
 
 </article>
@@ -198,13 +206,9 @@
     <ul>
         
         <li>
-            <a href="https://shakraz.github.io/blogs/rating/"><i class="fa fa-chevron-circle-left"></i> Сравнение жилищных комплексов г. Алматы</a>
+            <a href="https://shakraz.github.io/blogs/sources/"><i class="fa fa-chevron-circle-left"></i> Источники данных</a>
         </li>
         
-        
-        <li>
-            <a href="https://shakraz.github.io/blogs/covid/">1001-й covid-дашборд <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
         
     </ul>
 </section>
