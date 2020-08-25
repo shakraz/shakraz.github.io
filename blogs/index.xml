@@ -6,10 +6,397 @@
    <description>Recent content in Blogs on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
-   <lastBuildDate>Tue, 14 Jul 2020 23:04:57 -0400</lastBuildDate>
+   <lastBuildDate>Tue, 25 Aug 2020 00:06:24 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>Доля расходов на продукты по регионам</title>
+       <link>https://shakraz.github.io/blogs/spendings/</link>
+       <pubDate>Tue, 25 Aug 2020 00:06:24 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/spendings/</guid>
+       <description>&lt;html lang=&#34;Ru&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;script type=&#34;text/javascript&#34; src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
+  &lt;style&gt;
+.x-axis{
+  font-size: 8;
+}
+#charts{
+  padding: 10px;
+}
+svg{
+	margin:10px;
+}
+#container{
+  width: 100%;
+&lt;p&gt;margin-left:auto;
+margin-right: auto;
+}
+.line{
+stroke: steelblue;
+fill:none;
+}
+.area{
+fill:steelblue;
+opacity: 60%;
+}
+.y-axis,.x-axis{
+opacity: 60%;
+}&lt;/p&gt;
+&lt;p&gt;.tooltip circle{
+fill:steelblue;
+}
+.tooltip rect{
+stroke: #ccc;
+}
+.tooltip-value{
+font-size: :10;
+}
+.popup{
+fill: white;
+stroke: #000;
+}
+.overlay {
+fill: none;
+pointer-events: all;
+}&lt;/p&gt;
+&lt;p&gt;select{
+margin: 20px;
+font-size: 12px;
+}&lt;/p&gt;
+&lt;p&gt;h3,p{
+margin:0;
+}
+#header{
+margin: 20px;
+font-family: Roboto;
+}
+&lt;/style&gt;&lt;/p&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&#34;container&#34;&gt;
+    &lt;div id=&#34;header&#34;&gt;
+    &lt;a style=&#34;font-style: italic;color: #ccc&#34; href=&#34;https://taldau.stat.gov.kz/ru/NewIndex/GetIndex/704481?keyword=&#34; target=&#34;_blank&#34;&gt;На основе данных МНЭ РК&lt;/a&gt;
+  &lt;/div&gt;
+    &lt;select id=&#34;category&#34;&gt;&lt;/select&gt;
+&lt;div id = &#34;charts&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://shakraz.github.io/data/spendings.json&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://d3js.org/d3-array.v2.min.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+
+
+
+		var full_data = prepareData(spendings)
+
+		drawCharts()
+
+
+
+		function prepareData(){
+
+		   
+		  
+		  spendings.forEach(d=&gt;{
+		    d.periods.forEach(t=&gt;{
+		      t.value= +t.value
+		      t.date = d3.timeParse(&#34;%d.%m.%Y&#34;)(t.date)
+		      t.year = d3.timeFormat(&#34;%Y&#34;)(t.date)
+		      t.year = +t.year
+		    })
+		  })
+
+		  spendings = spendings.filter(d=&gt;d.termNames[1]==&#34;Всего&#34; &amp;&amp; d.termNames[0]!=&#34;ТУРКЕСТАНСКАЯ ОБЛАСТЬ&#34; &amp;&amp; d.termNames[0]!=&#34;Г.ШЫМКЕНТ&#34;)
+		  
+
+
+
+		  flat = []
+		  spendings.forEach(function(region) {
+		    region.periods.forEach(function(period) {
+		      flat.push({
+		        region: region.termNames[0],
+		        category: region.termNames[2],
+		        value: period.value,
+		        year: period.year
+		      });
+		    });
+		  });
+
+		  flat = flat.sort((a,b)=&gt; d3.ascending(a.year, b.year))
+
+		  total = d3.nest()
+		            .key(d=&gt;d.region)
+		            .key(d=&gt;d.year)
+		            .rollup(d=&gt;d3.sum(d,t=&gt;t.value))
+		            .entries(flat)
+		  total_flat = []
+
+		  total.forEach(r=&gt;{
+
+		    r.values.forEach(v=&gt;{
+
+		      total_flat.push({
+		        region:r.key,
+		        category:&#34;Всего&#34;,
+		        value:v.value,
+		        year:v.key
+		      })
+
+		    })
+		  })
+
+		  total_flat.forEach(d=&gt;{
+		    d.year = +d.year
+		  })
+
+		  flat=total_flat.concat(flat) //concat aggregated values by category
+		  return flat
+		}
+
+
+
+
+
+
+
+		function drawCharts(){
+
+		  flat =full_data
+		 d3.select(&#34;#category&#34;)
+		    .selectAll(&#34;option&#34;)
+		    .data(d3.map(flat,d=&gt;d.category).keys())
+		    .enter()
+		    .append(&#34;option&#34;)
+		    .property(&#34;selected&#34;,d=&gt;d==&#34;Всего&#34;)
+		    .text(d=&gt;d)
+		  
+
+		  var margin = {left:35, right:0, top:20, bottom:20}
+		  var outer_width = 250, outer_height=150;
+		  var width  = outer_width-margin.left-margin.right;
+		  var   height = outer_height-margin.top-margin.bottom;
+		  
+
+		  var x = d3.scaleLinear().range([0,width])
+		  var y = d3.scaleLinear().range([height,0])
+		  var regions = d3.map(flat,d=&gt;d.region).keys()
+		  var svg =d3.select(&#34;#charts&#34;)
+		                    .selectAll(&#34;svg&#34;)
+		                    .data(regions)
+		                    .enter()
+		                    .append(&#34;svg&#34;)
+		                    .attr(&#34;width&#34;,outer_width)
+		                    .attr(&#34;height&#34;,outer_height)
+		                    .append(&#34;g&#34;)
+		                    .classed(&#34;mini_chart&#34;,true)
+		                    .attr(&#34;transform&#34;,&#34;translate(&#34;+margin.left+&#34;,&#34;+margin.top+&#34;)&#34;)
+		  
+		  svg.append(&#34;path&#34;).attr(&#34;class&#34;,&#34;line&#34;)
+
+		  svg.append(&#34;path&#34;).attr(&#34;class&#34;,&#34;area&#34;)
+		  svg.append(&#34;text&#34;).attr(&#34;class&#34;,&#34;title&#34;)
+
+
+		 var xAxis=svg.append(&#34;g&#34;)
+		               .attr(&#34;class&#34;,&#34;x-axis&#34;)
+		               .attr(&#34;transform&#34;,&#34;translate(0,&#34;+height+&#34;)&#34;)
+		 
+
+		 var yAxis =  svg.append(&#34;g&#34;)
+		                 .attr(&#34;class&#34;,&#34;y-axis&#34;)
+
+		  update(d3.select(&#34;#category&#34;).property(&#34;value&#34;))
+
+		  function update(input){
+
+		       flat = full_data.filter(d=&gt;d.category==input)
+		       flat_nested =  d3.nest()
+		                     .key(d=&gt;d.region+&#34;|&#34;+d.category)
+		                     .entries(flat)
+
+		        max_value=d3.max(flat,d=&gt;d.value)
+		        y.domain([0,max_value])
+		        ex=d3.extent(flat,d=&gt;d.year)
+		        x.domain(ex)
+
+		        svg.selectAll(&#34;.x-axis&#34;)
+		           .transition().duration(600)
+		           .attr(&#34;transform&#34;,&#34;translate(0,&#34;+height+&#34;)&#34;)
+		           .call(d3.axisBottom(x)
+        				   .tickFormat(d3.format(&#34;&#34;)))
+
+		        svg.selectAll(&#34;.y-axis&#34;)
+		           .transition().duration(600)
+		           .call(d3.axisLeft(y)
+		                      .tickFormat(d =&gt; d + &#34;%&#34;)
+		                      .ticks(5))
+
+		        var line = d3.line().curve(d3.curveBasis)
+		                      .x(d=&gt;x(d.year))
+		                      .y(d=&gt;y(d.value))
+
+		         var area = d3.area().curve(d3.curveBasis)
+		                      .x(d=&gt;x(d.year))
+		                      .y1(d=&gt;y(d.value))
+		                      .y0(y(0))
+
+		      
+		        d3.selectAll(&#34;.mini_chart&#34;)
+		        .data(flat_nested)
+		        .each(function(d,i){
+		           
+		        var lines=  d3.select(this).select(&#34;path.line&#34;).data([d])
+		         lines.exit().remove()
+
+
+		        lines.enter().append(&#34;path&#34;).merge(lines)
+		             .transition().duration(700)
+		             .attr(&#34;class&#34;,&#34;line&#34;)
+		             .attr(&#34;d&#34;,d=&gt;line(d.values)) 
+
+
+
+		        var areas = d3.select(this).select(&#34;path.area&#34;).data([d])
+		        areas.exit().remove()
+
+		          areas.enter().append(&#34;path&#34;).merge(areas)
+		             .transition().duration(700)
+		             .attr(&#34;class&#34;,&#34;area&#34;)
+		             .attr(&#34;d&#34;,t=&gt;area(t.values)) 
+
+
+		        var label = d3.select(this).select(&#34;.title&#34;).data([d])
+
+		        label.exit().remove()
+
+		        label.enter().append(&#34;text&#34;)
+		             .merge(label)
+		             .attr(&#34;class&#34;,&#34;title&#34;)
+		             .attr(&#34;text-anchor&#34;, &#34;start&#34;)
+		             .attr(&#34;y&#34;, -5)
+		             .attr(&#34;x&#34;, 0)
+		             .text(d=&gt;d.key.split(&#34;|&#34;)[0])
+		             .attr(&#34;style&#34;,&#34;font-size:10&#34;) 
+		      }
+		  
+		  )
+
+
+		 }
+
+		  var bisectDate = d3.bisector(function(d) { return d.year; }).left
+
+		 //tooltip for all charts
+		 var tooltip = svg.append(&#34;g&#34;)
+		                  .attr(&#34;id&#34;,d=&gt;d.key)
+		                  .attr(&#34;class&#34;,&#34;tooltip&#34;)
+		                  .style(&#34;display&#34;,&#34;none&#34;)
+		  
+		  
+		tooltip.append(&#34;circle&#34;)
+		            .attr(&#34;r&#34;, 5);
+
+		tooltip.append(&#34;rect&#34;)
+		       .attr(&#34;class&#34;, &#34;popup&#34;)
+		       .attr(&#34;width&#34;, 80)
+		       .attr(&#34;height&#34;, 50)
+		       .attr(&#34;x&#34;, 10)
+		       .attr(&#34;y&#34;, -22)
+		       .attr(&#34;rx&#34;, 4)
+		       .attr(&#34;ry&#34;, 4);
+
+		tooltip.append(&#34;text&#34;)
+		       .attr(&#34;class&#34;, &#34;tooltip-date&#34;)
+		       .attr(&#34;x&#34;, 18)
+		       .attr(&#34;y&#34;, -2);
+
+/*		tooltip.append(&#34;text&#34;)
+		       .attr(&#34;x&#34;, 18)
+		       .attr(&#34;y&#34;, 18)
+		       .text(&#34;Доля:&#34;); */
+
+		tooltip.append(&#34;text&#34;)
+		       .attr(&#34;class&#34;, &#34;tooltip-likes&#34;)
+		       .attr(&#34;x&#34;, 20)
+		       .attr(&#34;y&#34;, 18)
+
+
+
+		  svg.append(&#34;rect&#34;)
+		    .attr(&#34;id&#34;,d=&gt;d.key.split(&#34;|&#34;)[0])
+		    .attr(&#34;class&#34;, &#34;overlay&#34;)
+		    .attr(&#34;width&#34;, width)
+		    .attr(&#34;height&#34;, height)
+		    .on(&#34;mouseover&#34;, function() { tooltip.style(&#34;display&#34;, null); })
+		    .on(&#34;mouseout&#34;, function() { tooltip.style(&#34;display&#34;, &#34;none&#34;); })
+		    .on(&#34;mousemove&#34;, mousemove);
+
+
+
+
+
+		function mousemove() {
+		            id = d3.select(this).attr(&#34;id&#34;)
+		            current_category=d3.select(&#34;#category&#34;).property(&#34;value&#34;)
+		            data = full_data.filter(d=&gt;d.region==id &amp;&amp; d.category==current_category)
+		          
+		            var x0 = x.invert(d3.mouse(this)[0]),
+		                i = bisectDate(data, x0, 1),
+		                d0 = data[i - 1],
+		                d1 = data[i],
+		                d = x0 - d0.year &gt; d1.year - x0 ? d1 : d0
+
+		            updateTooltips(d)
+		        }
+
+		function updateTooltips(d){
+
+		  current_category=d3.select(&#34;#category&#34;).property(&#34;value&#34;)
+		  var tooltips= d3.selectAll(&#34;.tooltip&#34;)
+		                  .attr(&#34;transform&#34;,c=&gt;{
+		                  var val =full_data.filter(t=&gt;t.region==c.key.split(&#34;|&#34;)[0] 
+		                                            &amp;&amp; t.year==d.year 
+		                                            &amp;&amp; t.category==current_category)[0]
+
+		                   
+		                   return  &#34;translate(&#34; + x(d.year) + &#34;,&#34; + y(val.value) + &#34;)&#34;
+		                                         } )
+		                  
+		    
+		    tooltips.select(&#34;.tooltip-date&#34;).text(d.year)
+
+
+		    tooltips.select(&#34;.tooltip-likes&#34;).text(c=&gt;{
+
+		  current_category=d3.select(&#34;#category&#34;).property(&#34;value&#34;)
+		       var val =full_data.filter(t=&gt;t.region==c.key.split(&#34;|&#34;)[0] 
+		                                            &amp;&amp; t.year==d.year 
+		                                            &amp;&amp; t.category==current_category)[0]
+		       
+		      return d3.format(&#34;.0%&#34;)(val.value/100)
+		    }) 
+		    
+		    
+
+		}
+
+
+		  var select = d3.select(&#34;#category&#34;)
+		    .on(&#34;change&#34;, function() {
+		      update(this.value)
+		    })
+
+
+		}
+&lt;/script&gt;
+</description>
+     </item>
    
      <item>
        <title>1001-й covid-дашборд</title>
