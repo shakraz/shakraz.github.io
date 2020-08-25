@@ -17,7 +17,10 @@
        <pubDate>Tue, 25 Aug 2020 00:06:24 -0400</pubDate>
        
        <guid>https://shakraz.github.io/blogs/spendings/</guid>
-       <description>&lt;html lang=&#34;Ru&#34;&gt;
+       <description>&lt;p&gt;Продолжайю экспереметировать с d3.
+Считается, что чем меньше тратится на продукты, тем развитее страна/регион. Тем интереснее посмотреть статистику изменения
+этой доли для различных регионов Казахстана.&lt;/p&gt;
+&lt;html lang=&#34;Ru&#34;&gt;
 &lt;head&gt;
   &lt;meta charset=&#34;utf-8&#34; /&gt;
   &lt;script type=&#34;text/javascript&#34; src=&#34;https://shakraz.github.io/js/d3.js&#34;&gt;&lt;/script&gt;
@@ -85,6 +88,7 @@ font-family: Roboto;
     &lt;select id=&#34;category&#34;&gt;&lt;/select&gt;
 &lt;div id = &#34;charts&#34;&gt;&lt;/div&gt;
   &lt;/div&gt;
+&lt;p&gt;Еще думал добавить сравнение с предыдущим годом, но не стал, так как это перегрузит график.&lt;/p&gt;
 &lt;/body&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://shakraz.github.io/data/spendings.json&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://d3js.org/d3-array.v2.min.js&#34;&gt;&lt;/script&gt;
