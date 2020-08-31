@@ -1,0 +1,14 @@
+{
+  "name": "@datavizkz/fiscal-budget",
+  "main": "539ef5d031e2d01e@192.js",
+  "version": "192.0.0",
+  "homepage": "https://observablehq.com/@datavizkz/fiscal-budget",
+  "author": {
+    "name": "datavizkz",
+    "url": "https://observablehq.com/@datavizkz"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

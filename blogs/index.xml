@@ -6,10 +6,63 @@
    <description>Recent content in Blogs on DATAVIZ.KZ</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2019 - Oraz Shakirov</copyright>
-   <lastBuildDate>Tue, 25 Aug 2020 00:06:24 -0400</lastBuildDate>
+   <lastBuildDate>Sun, 30 Aug 2020 14:11:45 -0400</lastBuildDate>
    
        <atom:link href="https://shakraz.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>Республиканский бюджет</title>
+       <link>https://shakraz.github.io/blogs/fiscal/</link>
+       <pubDate>Sun, 30 Aug 2020 14:11:45 -0400</pubDate>
+       
+       <guid>https://shakraz.github.io/blogs/fiscal/</guid>
+       <description>&lt;p&gt;Простая визуализая республиканского бюджета (включая доходную часть).
+Данные взяты из   &lt;a href=&#34;https://online.zakon.kz/m/document/?doc_id=36662380&#34;&gt;закона&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;obs-notebook&#34;&gt;
+  &lt;div id=&#34;level&#34;&gt;&lt;/div&gt;
+  &lt;div id=&#34;chart&#34;&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;script type=&#34;module&#34;&gt;
+  
+  import {Runtime, Inspector} from &#34;https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js&#34;;
+
+  
+  import notebook from &#34;https:\/\/api.observablehq.com\/@datavizkz\/fiscal-budget.js&#34;;
+
+  
+  
+  
+  
+  const renders = {
+    &#34;viewof level&#34;: &#34;#level&#34;,
+    &#34;chart&#34;: &#34;#chart&#34;,
+  };
+
+  Runtime.load(notebook, (variable) =&gt; {
+    const selector = renders[variable.name];
+    if (selector) {
+      return new Inspector(document.querySelector(selector));
+    }
+  });
+
+  
+&lt;/script&gt;
+
+&lt;style&gt;
+    #obs-notebook {
+      font-size: 0.8em;
+      background: #fdfdfd;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      padding: 9px;
+    }
+&lt;/style&gt;
+</description>
+     </item>
    
      <item>
        <title>Доля расходов на продукты по регионам</title>
